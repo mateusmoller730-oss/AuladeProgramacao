@@ -1,0 +1,121 @@
+// ============================================================
+//   ATIVIDADE 02-2 – Objetos em JavaScript
+// ============================================================
+// Instruções: resolva cada exercício no espaço indicado.
+// Use console.log() para exibir os resultados.
+// ============================================================
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 1 – Criando objetos
+// ------------------------------------------------------------
+// a) Crie um objeto "aluno" com as propriedades: nome, idade, curso.
+// b) Exiba o nome do aluno usando notação ponto.
+
+// → Seu código aqui:
+const aluno = { 
+nome: 'Mateus Moller',
+idade: 16,
+curso: "Desenvolvimento de Sistemas"
+}
+console.log(aluno.nome)
+
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 2 – Aninhamento e acesso
+// ------------------------------------------------------------
+// a) Adicione uma propriedade "endereco" ao objeto com cidade e rua.
+// b) Exiba a cidade
+
+// → Seu código aqui:
+
+const endereco = {
+cidade: 'Jaragua do Sul',
+rua: 'Ervino Meneggoti'
+}
+console.log(endereco.cidade)
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 3 – Habilidades (array dentro do objeto)
+// ------------------------------------------------------------
+// a) Adicione uma propriedade "habilidades" (array) ao objeto "aluno".
+// b) Exiba a primeira habilidade.
+
+// → Seu código aqui:
+aluno.habilidade = ['moreno','alto','bonito','esperto']
+
+console.log(aluno.habilidade[0]);
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 4 – Notas e média
+// ------------------------------------------------------------
+// a) Adicione uma propriedade "notas", sendo esse um array de números.
+// b) Exiba em uma única frase, o nome do aluno e suas notas.
+
+// → Seu código aqui:
+aluno.notas = [5,10,8,8,9]
+console.log(`O ${aluno.nome} alcancou as seguintes notas ${aluno.notas}`)
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 5 – Objetos aninhados e alteração
+// ------------------------------------------------------------
+// a) Adicione uma propriedade "responsavel" que é um objeto com nome e parentesco (mãe ou pai ou irmão, etc).
+// b) Exiba o nome do responsável.
+// c) Altere o nome do responsável e mostre que o objeto foi atualizado.
+
+// → Seu código aqui:
+const responsavel= {
+nomepai: "Vanderlei"
+}
+console.log(responsavel.nomepai)
+
+// ------------------------------------------------------------
+// EXERCÍCIO 6 – Lista de alunos (array de objetos)
+// ------------------------------------------------------------
+// a) Crie um array "listaDeAlunos" e adicione o objeto "aluno".
+// b) Crie outros dois objetos com dados de outros alunos.
+// c) Adicione os outros alunos na lista de alunos.
+// c) Exiba o nome do segundo aluno da lista.
+
+// → Seu código aqui:
+
+// Criando o array listaDeAlunos e adicionando o primeiro aluno
+
+const listaDeAlunos = ['moller','pedro','breno'];
+listaDeAlunos.push(aluno);
+
+const aluno2 = {
+nome: "ursula",
+idade: 17,
+notas: [7.5, 6.8, 8.0]
+}
+
+const aluno3 = {
+nome: "ursulo",
+idade: 15,
+notas: [10, 9.5, 9.8]
+}
+
+listaDeAlunos.push(aluno2)
+listaDeAlunos.push(aluno3)
+console.log(listaDeAlunos[1])
+
+// ------------------------------------------------------------
+// EXERCÍCIO 7 – Objetos e Arrays
+// ------------------------------------------------------------
+// a) Crie um array "listaDeAlunos" que contenha 3 alunos. Cada aluno deve ser um objeto (não uma variável que contem um objeto).
+// b) Cada objeto aluno deve conter nome(string), idade(number) e notas(array de numbers).
+// c) Exiba o nome e as notas de cada aluno.
+
+
+// → Seu código aqui:
+const listaDeAlunos2 = [aluno2,aluno3,aluno];
+
+
+console.log(`Aluno: ${aluno.nome} Notas: ${aluno.notas}.`)
+console.log(`Aluno: ${aluno2.nome} Notas: ${aluno2.notas}.`)
+console.log(`Aluno: ${aluno3.nome} Notas: ${aluno3.notas}.`)
