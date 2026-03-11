@@ -107,13 +107,13 @@ console.error("Algo nao esta certo");
 // c) Exiba a array com console.table().
 
 // → Seu código aqui:
-let comida1 = lerTeclado.question("Digite sua primeira comida favorita: ");
-let comida2 = lerTeclado.question("Digite sua segunda comida favorita: ");
-let comida3 = lerTeclado.question("Digite sua terceira comida favorita: ");
+//let comida1 = lerTeclado.question("Digite sua primeira comida favorita: ");
+//let comida2 = lerTeclado.question("Digite sua segunda comida favorita: ");
+//let comida3 = lerTeclado.question("Digite sua terceira comida favorita: ");
 
-let comidasFavoritas = [comida1, comida2, comida3];
+//let comidasFavoritas = [comida1, comida2, comida3];
 
-console.table(comidasFavoritas);
+//console.table(comidasFavoritas);
 
 
 // ------------------------------------------------------------
@@ -127,18 +127,19 @@ console.table(comidasFavoritas);
 
 // → Seu código aqui:
 
-let nome = lerTeclado.question("Digite seu nome:");
-let profissao = lerTeclado.question("Digite sua profissao");
-let cidade = lerTeclado.question("Digite sua cidade:");
+//let nome = lerTeclado.question("Digite seu nome:");
+//let profissao = lerTeclado.question("Digite sua profissao:");
+//let cidade = lerTeclado.question("Digite sua cidade:");
 
-let cadastroPessoal = {
-    nome: nome,
-    profissao: profissao,
-    cidade: cidade
+//let cadastroPessoal = {
+  //  nome: nome,
+  //  profissao: profissao,
+   // cidade: cidade
+//}
 
-    //console.log(`Me chamo ${cadastroPessoal.nome}. Profissão: ${cadastroPessoal.profissao} e moro na cidade de: ${cadastroPessoal.cidade}.`);
+//console.log(`Me chamo ${cadastroPessoal.nome}. Profissão: ${cadastroPessoal.profissao} e moro na cidade de: ${cadastroPessoal.cidade}.`);
 
-    //console.log("_______________________________");
+    
 
 
 // ------------------------------------------------------------
@@ -148,17 +149,73 @@ let cadastroPessoal = {
 //    nome(string), idade(number) e endereço(objeto).
 //    objeto endereço deve conter as propriedades: cidade(string), rua(string) e numero(number)
 // b) Armazene cada usuário em um objeto.
-// c) Armazee os objetos em um array 'listaDeUsuarios'
+// c) Armazene os objetos em um array 'listaDeUsuarios'
 // d) Exiba o array com console.table().
 // e) Exiba somente o nome e a idade do 2º usuário.
 // f) Exiba somente o endereço completo do 3º usuário.
 // g) Exiba somente o nome e a rua do 1º usuário.
 
 // → Seu código aqui:
+ //usuario1
+ //let n_user1 = lerTeclado.question("Digite seu nome:")
+ //let i_user1 = lerTeclado.question("Digite sua idade:")
+ //let city_user1 = lerTeclado.question("Digite sua cidade")
+ //let r_user1 = lerTeclado.question("Digite sua rua")
+ //let c_user1 = lerTeclado.question("Digite sua casa")
+
+//let user1 = {
+  //  nome: n_user1,
+   // idade: i_user1,
+   // cidade: c_user1,
+   // rua: r_user1,
+   // casa: c_user1
+//}
 
 
-console.log("_______________________________");
+ ///let n_user2 = lerTeclado.question("Digite seu nome:")
+ ///let i_user2 = lerTeclado.question("Digite sua idade:")
+//// let city_user2 = lerTeclado.question("Digite sua cidade")
+ ////let r_user2 = lerTeclado.question("Digite sua rua")
+// let c_user2 = lerTeclado.question("Digite sua casa")
 
+ //let user2 = {
+  //  nome: n_user2,
+  //  idade: i_user2,
+   // cidade: c_user2,
+  //  rua: r_user2,
+  //  casa: c_user2
+// }
+
+//let n_user3 = lerTeclado.question("Digite seu nome:")
+//let i_user3 = lerTeclado.question("Digite sua idade:")
+//let city_user3 = lerTeclado.question("Digite sua cidade")
+//let r_user3 = lerTeclado.question("Digite sua rua")
+//let c_user3 = lerTeclado.question("Digite sua casa")
+   
+//let user3 = {
+ //   nome: n_user3,
+ //   idade: i_user3,
+  //  endereco: {
+  //      cidade: c_user3,
+  //      rua: r_user3,
+  //      casa: c_user3
+  //  }
+ //}
+
+// Array com os usuários
+//let listaDeUsuarios = [user1, user2, user3]
+ 
+// d) Mostrar tabela
+//console.table(listaDeUsuarios)
+
+// e) Nome e idade do 2º usuário
+//console.log(user2.nome, user2.idade)
+
+// f) Endereço completo do 3º usuário
+//console.table(user3.endereco)
+
+// g) nome e rua user 1
+//console.log(user1.nome, user1.rua)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Ranking de notas
@@ -172,9 +229,50 @@ console.log("_______________________________");
 // g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
+let aluno01 = lerTeclado.question("Nome do Aluno")
+let n01_aluno01 = lerTeclado.question(`Nota 1 do aluno ${aluno01}:`)
+let n02_aluno01 = lerTeclado.question(`Nota 2 do aluno ${aluno01}:`)
+let n03_aluno01 = lerTeclado.question(`Nota 3 do aluno ${aluno01}:`)
+
+let aluno02 = lerTeclado.question("Nome do Aluno")
+let n01_aluno02 = lerTeclado.question(`Nota 1 do aluno ${aluno02}:`)
+let n02_aluno02 = lerTeclado.question(`Nota 2 do aluno ${aluno02}:`)
+let n03_aluno02 = lerTeclado.question(`Nota 3 do aluno ${aluno02}:`)
 
 
-console.log("_______________________________");
+let aluno03 = lerTeclado.question("Nome do Aluno")
+let n01_aluno03 = lerTeclado.question(`Nota 1 do aluno ${aluno03}:`)
+let n02_aluno03 = lerTeclado.question(`Nota 2 do aluno ${aluno03}:`)
+let n03_aluno03 = lerTeclado.question(`Nota 3 do aluno ${aluno03}:`)
+
+let estudante01 = {
+    nome: aluno01,
+    nota1:n01_aluno01,
+    nota2:n02_aluno01,
+    nota3:n03_aluno01
+}
+
+let estudante02 = {
+    nome: aluno02,
+    nota1:n01_aluno02,
+    nota2:n02_aluno02,
+    nota3:n03_aluno02
+}
+
+let estudante03 = {
+    nome: aluno03,
+    nota1:n01_aluno03,
+    nota2:n02_aluno03,
+    nota3:n03_aluno03
+}
+
+let turma = [estudante01, estudante02, estudante03]
+
+console.table(turma)
+console.log(estudante02.nome, estudante01.nota1)
+console.log(estudante03.nome, estudante01.nota2)
+console.log(estudante01.nome, estudante01.nota3) 
+
 
 
 // ------------------------------------------------------------
@@ -193,9 +291,12 @@ console.log("_______________________________");
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui:
+let nome = lerTeclado.question("Nome:")
+let categoria = lerTeclado.question("Categoria:")
+let preco = lerTeclado.question("Preco:")
+let quantidadeestoque = lerteclado.question("estoque")
 
-
-console.log("_______________________________");
+//console.log("_______________________________");
 
 
 // ------------------------------------------------------------
