@@ -294,7 +294,7 @@ console.log(estudante01.nome, estudante01.nota3)
 let nome = lerTeclado.question("Nome:")
 let categoria = lerTeclado.question("Categoria:")
 let preco = lerTeclado.question("Preco:")
-let quantidadeestoque = lerteclado.question("estoque")
+let quantidadeestoque = lerteclado.question("estoquenode C:\Users\mateus_moller\AuladeProgramacao\atividade-03.js")
 
 //console.log("_______________________________");
 
