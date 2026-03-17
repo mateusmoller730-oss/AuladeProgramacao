@@ -58,7 +58,14 @@
 
 // → Seu código aqui:
 
+// let largura = 8;
+// let altura = 5;
 
+// let area = largura * altura;
+
+// let perimetro = 2 * largura + 2 * altura;
+
+// console.log(`Retângulo | Largura: ${largura} | Altura: ${altura} | Área: ${area} | Perímetro: ${perimetro}`);
 
 // ------------------------------------------------------------
 // EXERCÍCIO 3 – Calculando desconto
@@ -98,15 +105,15 @@
 
 // → Seu código aqui:
 
-let pontos = 100
-pontos += 50;
-console.log(`Pontos após soma: ${pontos}`); 
-pontos -= 30;
-console.log(`Pontos após subtração: ${pontos}`);
-pontos *= 2;
-console.log(`Pontos após multiplicação: ${pontos}`);
-pontos /= 4;
-console.log(`Pontos após divisão: ${pontos}`);
+// let pontos = 100
+// pontos += 50;
+// console.log(`Pontos após soma: ${pontos}`); 
+// pontos -= 30;
+// console.log(`Pontos após subtração: ${pontos}`);
+// pontos *= 2;
+// console.log(`Pontos após multiplicação: ${pontos}`);
+// pontos /= 4;
+// console.log(`Pontos após divisão: ${pontos}`);
 
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Incremento e decremento
