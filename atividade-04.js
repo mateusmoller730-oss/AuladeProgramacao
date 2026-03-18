@@ -127,9 +127,24 @@
 
 // → Seu código aqui:
 
+// let vidas = 3
+// console.log(`vidas: ${vidas}`)
 
-console.log("_______________________________");
+// vidas ++
+// console.log(`vidas: ${vidas}`)
 
+// vidas --
+// console.log(`vidas: ${vidas}`)
+
+// let nivel = 1
+// nivel ++ 
+// console.log(`nivel 01: ${nivel}`)
+
+// nivel ++ 
+// console.log(`nivel 02: ${nivel}`)
+
+// nivel ++ 
+// console.log(`nivel 03: ${nivel}`)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Funções matemáticas (Math)
@@ -144,8 +159,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let nota = 7.3
 
-console.log("_______________________________");
+console.log(Math.round(nota))
+console.log(Math.floor(nota))
+console.log(Math.ceil(nota))
+
+let temperatura = -12.5
+
+console.log(Math.abs(temperatura))
+
+console.log(Math.max(42, 17, 89, 5, 63))
+
+console.log(Math.min(42, 17, 89, 5, 63))
+
 
 
 // ------------------------------------------------------------
@@ -157,10 +184,22 @@ console.log("_______________________________");
 //    "Nota 1: <n1> | Nota 2: <n2> | Nota 3: <n3>"
 //    "Média: <media>" (com 2 casas decimais usando toFixed(2))
 
+let lerTeclado = require('readline-sync');
+
 // → Seu código aqui:
 
+// let nota1 = lerTeclado.questionFloat("Digite a primeira nota: ");
+// let nota2 = lerTeclado.questionFloat("Digite a segunda nota: ");
+// let nota3 = lerTeclado.questionFloat("Digite a terceira nota: ");
 
-console.log("_______________________________");
+// let media = (nota1 + nota2 + nota3) / 3;
+
+// console.log(`Nota 1: ${nota1} | Nota 2: ${nota2} | Nota 3: ${nota3}`);
+// console.log(`Média: ${media.toFixed(2)}`);
+
+
+
+
 
 
 // ------------------------------------------------------------
