@@ -199,15 +199,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let preco = lerTeclado.questionFloat("Precifique o chocolate: ")
-const precoMaximo = 50
+// let preco = lerTeclado.questionFloat("Precifique o chocolate: ")
+// const precoMaximo = 50
 
-let estaDentroDoOrcamento = preco <= precoMaximo
-let esteItemEhCaro = preco > precoMaximo
+// let estaDentroDoOrcamento = preco <= precoMaximo
+// let esteItemEhCaro = preco > precoMaximo
 
-console.log(`Preço informado: R$ ${preco}`);
-console.log(`Dentro do orçamento (≤ R$ ${precoMaximo})? : ${estaDentroDoOrcamento ? "Sim" : "Não"}`);
-console.log(`Item mais caro que (> R$ ${precoMaximo})? : ${esteItemEhCaro ? "Sim" : "Não"}`);
+// console.log(`Preço informado: R$ ${preco}`);
+// console.log(`Dentro do orçamento (≤ R$ ${precoMaximo})? : ${estaDentroDoOrcamento ? "Sim" : "Não"}`);
+// console.log(`Item mais caro que (> R$ ${precoMaximo})? : ${esteItemEhCaro ? "Sim" : "Não"}`);
 
 
 
@@ -226,8 +226,31 @@ console.log(`Item mais caro que (> R$ ${precoMaximo})? : ${esteItemEhCaro ? "Sim
 
 // → Seu código aqui:
 
+// let nome1= lerTeclado.question("Digite seu nome: ")
+// let idade1= lerTeclado.question("Digite sua idade: ")
+// let nome2= lerTeclado.question("Digite seu nome: ")
+// let idade2= lerTeclado.question("Digite sua idade: ")
 
-console.log("_______________________________");
+// let cadastro = [
+//     usuario1 = {
+//     nome: nome1,
+//     idade: idade1  
+// },
+
+//     usuario2 = {
+//     nome: nome2,
+//     idade: idade2
+// }
+// ]
+
+// let resultados = {
+//     maior: idade1 > idade2,
+//     igual: idade1 === idade2,
+//     usuario1MaiorDeIdade: idade1 >= 18,
+//     usuario2MaiorDeIdade: idade2 >= 18
+//   };
+//   console.log(`A idade de ${nome1} é ${idade1} e ela é ${idade1 >= 18 ? "maior de idade" : "menor de idade"}.`);
+//   console.log(`A idade de ${nome2} é ${idade2} e ela é ${idade2 >= 18 ? "maior de idade" : "menor de idade"}.`);
 
 
 // ------------------------------------------------------------
@@ -239,6 +262,36 @@ console.log("_______________________________");
 // c) Compare e exiba no console, qual aluno obteve a primeira maior nota, a segunda e a terceira.
 //    Exemplo: `Aluno com primeira maior nota: ${nota1aluno1 > nota1aluno2 ? nomeAluno1 : nomeAluno2}`
 // → Seu código aqui:
+let nomeAluno1 = lerTeclado.question("Digite o nome do aluno 1: ");
+let nota1Aluno1 = lerTeclado.questionFloat("Digite a nota 1 do aluno 1: ");
+let nota2Aluno1 = lerTeclado.questionFloat("Digite a nota 2 do aluno 1: ");
+let nota3Aluno1 = lerTeclado.questionFloat("Digite a nota 3 do aluno 1: ");
 
+let nomeAluno2 = lerTeclado.question("Digite o nome do aluno 2: ");
+let nota1Aluno2 = lerTeclado.questionFloat("Digite a nota 1 do aluno 2: ");
+let nota2Aluno2 = lerTeclado.questionFloat("Digite a nota 2 do aluno 2: ");
+let nota3Aluno2 = lerTeclado.questionFloat("Digite a nota 3 do aluno 2: ");
 
-console.log("_______________________________");
+let alunos = [
+  
+  aluno1 = {
+  nota1: nota1Aluno1,
+  nota2: nota2Aluno1,
+  nota3: nota3Aluno1,
+  
+},
+
+  aluno2 = {
+  nota1: nota1Aluno2,
+  nota2: nota2Aluno2,
+  nota3: nota3Aluno2,
+}
+]
+
+let mediaAluno1 = (nota1Aluno1+nota2Aluno1+nota3Aluno1)
+
+let mediaAluno2 = (nota1Aluno2+nota2Aluno2+nota3Aluno2)
+
+console.log(`Aluno com maior média: ${mediaAluno1 === mediaAluno2? "Empate": mediaAluno1 > mediaAluno2? nomeAluno1: nomeAluno2}`)
+
+console.log(`Aluno com primeira maior nota: ${nota1Aluno1 > nota1Aluno2 ? nomeAluno1 : nomeAluno2}`)
