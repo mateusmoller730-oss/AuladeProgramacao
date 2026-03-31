@@ -188,7 +188,7 @@ let pessoa = {
 
 // → Seu código aqui:
 
-let pessoa = {
+let motorista = {
    nome: lerTeclado.question("Qual seu nome? "),
    Idade: lerTeclado.questionInt("Qual sua idade? "),
    habilitacao: lerTeclado.keyIn("Tem habilitacao? ")
