@@ -213,7 +213,56 @@ console.log("_______________________________");
 // 
 
 
-}
+// let numero = lerTeclado.questionInt("Digite um numero de 1 a 7: ");
+
+// let nomeDia;
+
+// switch (numero) {
+// case 1: 
+// nomeDia = "Segunda"; 
+
+// break;
+// case 2: 
+// nomeDia = "Terça"; 
+// break;
+// case 3: 
+// nomeDia = "Quarta"; 
+// break;
+// case 4: 
+// nomeDia = "Quinta"; 
+// break;
+// case 5: 
+// nomeDia = "Sexta"; 
+// break;
+// case 6: 
+// nomeDia = "Sábado"; 
+// break;
+// case 7: 
+// nomeDia = "Domingo"; 
+// break;
+// default: 
+// nomeDia = null;
+// }
+
+// switch(numero) {
+//     case 1:
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//         console.log("Dia útil");
+//         break;
+//     case 6:
+//     case 7:
+//         console.log("Final de semana");
+//         break;
+//     default:
+//         console.log("Número inválido")
+// }
+
+// if (nomeDia) {
+// console.log("Dia:", nomeDia);
+// }
 console.log("_______________________________");
 
 
@@ -234,6 +283,47 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let produto = {}; 
+
+produto.nome = lerTeclado.question("Digite o nome do produto: ");
+
+console.log("Escolha a categoria do produto:");
+console.log("1 – Eletrônico");
+console.log("2 – Vestuário");
+console.log("3 – Alimento");
+console.log("4 – Livro");
+
+let categoriaNumero = lerTeclado.questionInt("Digite um número de 1 a 4: ");
+
+produto.preco = question(lerTeclado.question("Digite o preço do produto: "));
+
+switch(categoriaNumero) {
+    case 1:
+        produto.descricaoCategoria = "Eletrônico";
+        produto.garantia = "12 meses";
+        break;
+    case 2:
+        produto.descricaoCategoria = "Vestuário";
+        produto.garantia = "Troca em 30 dias";
+        break;
+    case 3:
+        produto.descricaoCategoria = "Alimento";
+        produto.garantia = "Ver validade";
+        break;
+
+        case 4:
+        produto.descricaoCategoria = "Livro";
+        produto.garantia = "Sem garantia";
+        break;
+
+        default:
+        produto.descricaoCategoria = "Categoria inválida";
+        produto.garantia = "Sem garantia";
+        console.log("\nCategoria inválida.");
+        break;
+}
+console.log("Produto cadastrado:");
+console.table(produto);
 
 console.log("_______________________________");
 
@@ -298,4 +388,5 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-console.log("_______________________________");
+
+
