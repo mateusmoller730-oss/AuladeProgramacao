@@ -210,7 +210,7 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// 
+// j
 
 
 // let numero = lerTeclado.questionInt("Digite um numero de 1 a 7: ");
@@ -283,49 +283,51 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let produto = {}; 
 
-produto.nome = lerTeclado.question("Digite o nome do produto: ");
 
-console.log("Escolha a categoria do produto:");
-console.log("1 – Eletrônico");
-console.log("2 – Vestuário");
-console.log("3 – Alimento");
-console.log("4 – Livro");
+// let lerTeclado = require('readline-sync');
 
-let categoriaNumero = lerTeclado.questionInt("Digite um número de 1 a 4: ");
+// let produto = {}; 
 
-produto.preco = question(lerTeclado.question("Digite o preço do produto: "));
+// produto.nome = lerTeclado.question("Digite o nome do produto: ");
 
-switch(categoriaNumero) {
-    case 1:
-        produto.descricaoCategoria = "Eletrônico";
-        produto.garantia = "12 meses";
-        break;
-    case 2:
-        produto.descricaoCategoria = "Vestuário";
-        produto.garantia = "Troca em 30 dias";
-        break;
-    case 3:
-        produto.descricaoCategoria = "Alimento";
-        produto.garantia = "Ver validade";
-        break;
+// console.log("Escolha a categoria do produto:");
+// console.log("1 – Eletrônico");
+// console.log("2 – Vestuário");
+// console.log("3 – Alimento");
+// console.log("4 – Livro");
 
-        case 4:
-        produto.descricaoCategoria = "Livro";
-        produto.garantia = "Sem garantia";
-        break;
+// let categoriaNumero = lerTeclado.questionInt("Digite um número de 1 a 4: ");
 
-        default:
-        produto.descricaoCategoria = "Categoria inválida";
-        produto.garantia = "Sem garantia";
-        console.log("\nCategoria inválida.");
-        break;
-}
-console.log("Produto cadastrado:");
-console.table(produto);
+// produto.preco = parseFloat(lerTeclado.question("Digite o preço do produto: "));
 
-console.log("_______________________________");
+
+// switch(categoriaNumero) {
+//     case 1:
+//         produto.descricaoCategoria = "Eletrônico";
+//         produto.garantia = "12 meses";
+//         break;
+//     case 2:
+//         produto.descricaoCategoria = "Vestuário";
+//         produto.garantia = "Troca em 30 dias";
+//         break;
+//     case 3:
+//         produto.descricaoCategoria = "Alimento";
+//         produto.garantia = "Ver validade";
+//         break;
+//     case 4:
+//         produto.descricaoCategoria = "Livro";
+//         produto.garantia = "Sem garantia";
+//         break;
+//     default:
+//         produto.descricaoCategoria = "Categoria inválida";
+//         produto.garantia = "Sem garantia";
+//         console.log("Categoria inválida.");
+//         break;
+// }
+
+// console.log("Produto cadastrado:");
+// console.table(produto);
 
 
 // ------------------------------------------------------------
@@ -345,8 +347,50 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let aluno = {};
 
-console.log("_______________________________");
+aluno.nome = lerTeclado.question("Digite o nome do aluno: ");
+aluno.nota = lerTeclado.questionInt("Digite a nota (0 a 10): ");
+
+switch (aluno.nota) {
+    case 10:
+    case 9:
+        aluno.conceito = "A";
+        aluno.mensagem = "Excelente!";
+        break;
+
+    case 8:
+    case 7:
+        aluno.conceito = "B";
+        aluno.mensagem = "Muito bom!";
+        break;
+    case 6:
+    case 5:
+        aluno.conceito = "C";
+        aluno.mensagem = "Suficiente.";
+        break;
+    case 4:
+    case 3:
+        aluno.conceito = "D";
+        aluno.mensagem = "Em recuperação.";
+        break;
+
+    case 2:
+    case 1:
+    case 0:
+        aluno.conceito = "F";
+        aluno.mensagem = "Reprovado.";
+        break;
+    
+    default :   
+        aluno.conceito = "Nota inválida.";
+        aluno.mensagem = "Nota inválida.";
+        break;
+}
+console.log(`Nome: ${aluno.nome}`);
+console.log(`Nota: ${aluno.nota}`);
+console.log(`Conceito: ${aluno.conceito}`);
+console.log(`Mensagem: ${aluno.mensagem}`);
 
 
 // ------------------------------------------------------------
