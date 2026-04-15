@@ -63,12 +63,12 @@
 // Monte uma frase usando template literal contando uma mini história com esses dados.
 
 // → Seu código aqui:
-let personagem = 'Homem Aranha'
-let idade = '26'
-let cidade = 'Nova York'
-let missao = 'fazer a mj lembrar dele'
-let template = `O personagem ${personagem} tem ${idade} anos, mora em ${cidade} e sua missão é ${missao}`
-console.log(template)
+// let personagem = 'Homem Aranha'
+// let idade = '26'
+// let cidade = 'Nova York'
+// let missao = 'fazer a mj lembrar dele'
+// let template = `O personagem ${personagem} tem ${idade} anos, mora em ${cidade} e sua missão é ${missao}`
+// console.log(template)
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Mensagem motivacional
 // ------------------------------------------------------------
@@ -76,10 +76,10 @@ console.log(template)
 // Use template literal para criar uma mensagem motivacional personalizada.
 
 // → Seu código aqui:
-let meunome = 'Mateus'
-let objetivo = 'ganhar conhecimento nessa area'
-let esseano = `Meu nome é ${meunome} e meu objetivo é ${objetivo}.`
-console.log(esseano)
+// let meunome = 'Mateus'
+// let objetivo = 'ganhar conhecimento nessa area'
+// let esseano = `Meu nome é ${meunome} e meu objetivo é ${objetivo}.`
+// console.log(esseano)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Menu

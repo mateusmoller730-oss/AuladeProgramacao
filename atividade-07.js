@@ -153,23 +153,23 @@ let lerTeclado = require('readline-sync');
 //      - caso contrário → "Entrada inteira."
 
 // → Seu código aqui:
-let pessoa = {
-    nome: lerTeclado.question("Digite seu nome: "),
-    temIngresso: lerTeclado.keyInYN("Possui ingresso? "),
-    idade: lerTeclado.questionInt("Digite sua idade: ")
-  };
+// let pessoa = {
+//     nome: lerTeclado.question("Digite seu nome: "),
+//     temIngresso: lerTeclado.keyInYN("Possui ingresso? "),
+//     idade: lerTeclado.questionInt("Digite sua idade: ")
+//   };
   
-  if (pessoa.temIngresso) {
-    console.log(`${pessoa.nome}, dirija-se à bilheteria.`);
-  } else {
-    if (pessoa.idade < 18) {
-      console.log("Meia-entrada: menor de idade.");
-    } else if (pessoa.idade >= 60) {
-      console.log("Meia-entrada: melhor idade.");
-    } else {
-      console.log("Entrada inteira.");
-    }
-  }
+//   if (pessoa.temIngresso) {
+//     console.log(`${pessoa.nome}, dirija-se à bilheteria.`);
+//   } else {
+//     if (pessoa.idade < 18) {
+//       console.log("Meia-entrada: menor de idade.");
+//     } else if (pessoa.idade >= 60) {
+//       console.log("Meia-entrada: melhor idade.");
+//     } else {
+//       console.log("Entrada inteira.");
+//     }
+//   }
 
 
 
@@ -188,12 +188,12 @@ let pessoa = {
 
 // → Seu código aqui:
 
-let motorista = {
-   nome: lerTeclado.question("Qual seu nome? "),
-   Idade: lerTeclado.questionInt("Qual sua idade? "),
-   habilitacao: lerTeclado.keyIn("Tem habilitacao? ")
-}
-console.log("_______________________________");
+// let motorista = {
+//    nome: lerTeclado.question("Qual seu nome? "),
+//    Idade: lerTeclado.questionInt("Qual sua idade? "),
+//    habilitacao: lerTeclado.keyIn("Tem habilitacao? ")
+// }
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------

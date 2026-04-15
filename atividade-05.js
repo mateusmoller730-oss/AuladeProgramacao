@@ -262,36 +262,36 @@ console.log("_______________________________");
 // c) Compare e exiba no console, qual aluno obteve a primeira maior nota, a segunda e a terceira.
 //    Exemplo: `Aluno com primeira maior nota: ${nota1aluno1 > nota1aluno2 ? nomeAluno1 : nomeAluno2}`
 // → Seu código aqui:
-let nomeAluno1 = lerTeclado.question("Digite o nome do aluno 1: ");
-let nota1Aluno1 = lerTeclado.questionFloat("Digite a nota 1 do aluno 1: ");
-let nota2Aluno1 = lerTeclado.questionFloat("Digite a nota 2 do aluno 1: ");
-let nota3Aluno1 = lerTeclado.questionFloat("Digite a nota 3 do aluno 1: ");
+// let nomeAluno1 = lerTeclado.question("Digite o nome do aluno 1: ");
+// let nota1Aluno1 = lerTeclado.questionFloat("Digite a nota 1 do aluno 1: ");
+// let nota2Aluno1 = lerTeclado.questionFloat("Digite a nota 2 do aluno 1: ");
+// let nota3Aluno1 = lerTeclado.questionFloat("Digite a nota 3 do aluno 1: ");
 
-let nomeAluno2 = lerTeclado.question("Digite o nome do aluno 2: ");
-let nota1Aluno2 = lerTeclado.questionFloat("Digite a nota 1 do aluno 2: ");
-let nota2Aluno2 = lerTeclado.questionFloat("Digite a nota 2 do aluno 2: ");
-let nota3Aluno2 = lerTeclado.questionFloat("Digite a nota 3 do aluno 2: ");
+// let nomeAluno2 = lerTeclado.question("Digite o nome do aluno 2: ");
+// let nota1Aluno2 = lerTeclado.questionFloat("Digite a nota 1 do aluno 2: ");
+// let nota2Aluno2 = lerTeclado.questionFloat("Digite a nota 2 do aluno 2: ");
+// let nota3Aluno2 = lerTeclado.questionFloat("Digite a nota 3 do aluno 2: ");
 
-let alunos = [
+// let alunos = [
   
-  aluno1 = {
-  nota1: nota1Aluno1,
-  nota2: nota2Aluno1,
-  nota3: nota3Aluno1,
+//   aluno1 = {
+//   nota1: nota1Aluno1,
+//   nota2: nota2Aluno1,
+//   nota3: nota3Aluno1,
   
-},
+// },
 
-  aluno2 = {
-  nota1: nota1Aluno2,
-  nota2: nota2Aluno2,
-  nota3: nota3Aluno2,
-}
-]
+//   aluno2 = {
+//   nota1: nota1Aluno2,
+//   nota2: nota2Aluno2,
+//   nota3: nota3Aluno2,
+// }
+// ]
 
-let mediaAluno1 = (nota1Aluno1+nota2Aluno1+nota3Aluno1)
+// let mediaAluno1 = (nota1Aluno1+nota2Aluno1+nota3Aluno1)
 
-let mediaAluno2 = (nota1Aluno2+nota2Aluno2+nota3Aluno2)
+// let mediaAluno2 = (nota1Aluno2+nota2Aluno2+nota3Aluno2)
 
-console.log(`Aluno com maior média: ${mediaAluno1 === mediaAluno2? "Empate": mediaAluno1 > mediaAluno2? nomeAluno1: nomeAluno2}`)
+// console.log(`Aluno com maior média: ${mediaAluno1 === mediaAluno2? "Empate": mediaAluno1 > mediaAluno2? nomeAluno1: nomeAluno2}`)
 
-console.log(`Aluno com primeira maior nota: ${nota1Aluno1 > nota1Aluno2 ? nomeAluno1 : nomeAluno2}`)
+// console.log(`Aluno com primeira maior nota: ${nota1Aluno1 > nota1Aluno2 ? nomeAluno1 : nomeAluno2}`)

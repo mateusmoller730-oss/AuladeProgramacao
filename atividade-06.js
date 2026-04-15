@@ -192,10 +192,10 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-let ehEstudante = lerTeclado.keyInYN("Você é bolsista?");
-let pagaMais = lerTeclado.keyInYN("Estudante paga mais que R$ 1000,00 mensais pelo curso?");
-let mensagem =(ehEstudante && pagaMaisDe1000)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
-console.log(`Situação do aluno: Bolsista? ${ehEstudante}, Paga mais que R$ 1000,00? ${pagaMais}. ${mensagem}`);
+// let ehEstudante = lerTeclado.keyInYN("Você é bolsista?");
+// let pagaMais = lerTeclado.keyInYN("Estudante paga mais que R$ 1000,00 mensais pelo curso?");
+// let mensagem =(ehEstudante && pagaMaisDe1000)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
+// console.log(`Situação do aluno: Bolsista? ${ehEstudante}, Paga mais que R$ 1000,00? ${pagaMais}. ${mensagem}`);
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Verificação de acesso com input

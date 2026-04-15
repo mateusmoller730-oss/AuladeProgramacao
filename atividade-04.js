@@ -159,19 +159,19 @@
 
 // → Seu código aqui:
 
-let nota = 7.3
+// let nota = 7.3
 
-console.log(Math.round(nota))
-console.log(Math.floor(nota))
-console.log(Math.ceil(nota))
+// console.log(Math.round(nota))
+// console.log(Math.floor(nota))
+// console.log(Math.ceil(nota))
 
-let temperatura = -12.5
+// let temperatura = -12.5
 
-console.log(Math.abs(temperatura))
+// console.log(Math.abs(temperatura))
 
-console.log(Math.max(42, 17, 89, 5, 63))
+// console.log(Math.max(42, 17, 89, 5, 63))
 
-console.log(Math.min(42, 17, 89, 5, 63))
+// console.log(Math.min(42, 17, 89, 5, 63))
 
 
 
@@ -216,21 +216,30 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
+// let valorCompra = lerTeclado.questionFloat("Digite o valor total da compra? ")
 
-console.log("_______________________________");
+// let valorPago = lerTeclado.questionFloat("Digite o valor entregue pelo cliente (maior que o valor da compra): ")
+
+// let troco = valorCompra - valorPago
+
+
+// console.log("Total da compra:  R$ " + valorCompra.toFixed(2));
+// console.log("Valor entregue:   R$ " + valorPago.toFixed(2));
+// console.log("Troco:            R$ " + troco.toFixed(2));
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Valor total de listas
 // ------------------------------------------------------------
 // a) Dada uma lista de preços, calcule e exiba o total.
-let precos = [29.90, 49.99, 15.75, 99.90];
+// let precos = [29.90, 49.99, 15.75, 99.90];
 // b) Dada uma lista de notas, calcule e exiba a média.
-let notas = [7.5, 8.2, 6.5, 9.0];
+// let notas = [7.5, 8.2, 6.5, 9.0];
 // c) Dada uma lista de idades, exiba a maior e a menor idade utilizando das funções Math().
-let idades = [15, 22, 30, 18, 25];
+// let idades = [15, 22, 30, 18, 25];
 
 // → Seu código aqui:
+
 
 
 console.log("_______________________________");
@@ -262,5 +271,25 @@ let turma = {
 
 // → Seu código aqui:
 
+turma.aluno1.notas.push(lerTeclado.questionInt("Digite a primeira nota de João: "));
+turma.aluno1.notas.push(lerTeclado.questionInt("Digite a segunda nota de João: "));
+turma.aluno1.notas.push(lerTeclado.questionInt("Digite a terceira nota de João: "));
 
+turma.aluno2.notas.push(lerTeclado.questionInt("Digite a primeira nota de Maria: "));
+turma.aluno2.notas.push(lerTeclado.questionInt("Digite a segunda nota de Maria: "));
+turma.aluno2.notas.push(lerTeclado.questionInt("Digite a terceira nota de Maria: "));
+
+turma.aluno3.notas.push(lerTeclado.questionInt("Digite a primeira nota de Pedro: "));
+turma.aluno3.notas.push(lerTeclado.questionInt("Digite a segunda nota de Pedro: "));
+turma.aluno3.notas.push(lerTeclado.questionInt("Digite a terceira nota de Pedro: "));
+
+let mediaJoao = (turma.aluno1.notas[0] + turma.aluno1.notas[1] + turma.aluno1.notas[2]) / 3;
+let mediaMaria = (turma.aluno2.notas[0] + turma.aluno2.notas[1] + turma.aluno2.notas[2]) / 3;
+let mediaPedro = (turma.aluno3.notas[0] + turma.aluno3.notas[1] + turma.aluno3.notas[2]) / 3;
+
+console.log("Média do João: " + mediaJoao.toFixed(2));
+console.log("Média da Maria: " + mediaMaria.toFixed(2));
+console.log("Média do Pedro: " + mediaPedro.toFixed(2)); 
+
+let mediaTurma = (mediaJoao + mediaMaria + mediaPedro) /3;
 console.log("_______________________________");

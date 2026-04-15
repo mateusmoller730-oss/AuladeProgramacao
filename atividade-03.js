@@ -24,10 +24,10 @@ let lerTeclado = require('readline-sync');
 // d) Use console.error() para exibir uma mensagem de erro aleatória de sua escolha.
 
 // → Seu código aqui:
-console.log("Iniciando o programa...")
-console.info("Aula de Input e Output")
-console.warn("usuário sempre precisa iniciar o programa com node e o nome do arquivo.")
-console.error("Algo nao esta certo");
+// console.log("Iniciando o programa...")
+// console.info("Aula de Input e Output")
+// console.warn("usuário sempre precisa iniciar o programa com node e o nome do arquivo.")
+// console.error("Algo nao esta certo");
 
 
 // ------------------------------------------------------------
@@ -229,49 +229,49 @@ console.error("Algo nao esta certo");
 // g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
-let aluno01 = lerTeclado.question("Nome do Aluno")
-let n01_aluno01 = lerTeclado.question(`Nota 1 do aluno ${aluno01}:`)
-let n02_aluno01 = lerTeclado.question(`Nota 2 do aluno ${aluno01}:`)
-let n03_aluno01 = lerTeclado.question(`Nota 3 do aluno ${aluno01}:`)
+// let aluno01 = lerTeclado.question("Nome do Aluno")
+// let n01_aluno01 = lerTeclado.question(`Nota 1 do aluno ${aluno01}:`)
+// let n02_aluno01 = lerTeclado.question(`Nota 2 do aluno ${aluno01}:`)
+// let n03_aluno01 = lerTeclado.question(`Nota 3 do aluno ${aluno01}:`)
 
-let aluno02 = lerTeclado.question("Nome do Aluno")
-let n01_aluno02 = lerTeclado.question(`Nota 1 do aluno ${aluno02}:`)
-let n02_aluno02 = lerTeclado.question(`Nota 2 do aluno ${aluno02}:`)
-let n03_aluno02 = lerTeclado.question(`Nota 3 do aluno ${aluno02}:`)
+// let aluno02 = lerTeclado.question("Nome do Aluno")
+// let n01_aluno02 = lerTeclado.question(`Nota 1 do aluno ${aluno02}:`)
+// let n02_aluno02 = lerTeclado.question(`Nota 2 do aluno ${aluno02}:`)
+// let n03_aluno02 = lerTeclado.question(`Nota 3 do aluno ${aluno02}:`)
 
 
-let aluno03 = lerTeclado.question("Nome do Aluno")
-let n01_aluno03 = lerTeclado.question(`Nota 1 do aluno ${aluno03}:`)
-let n02_aluno03 = lerTeclado.question(`Nota 2 do aluno ${aluno03}:`)
-let n03_aluno03 = lerTeclado.question(`Nota 3 do aluno ${aluno03}:`)
+// let aluno03 = lerTeclado.question("Nome do Aluno")
+// let n01_aluno03 = lerTeclado.question(`Nota 1 do aluno ${aluno03}:`)
+// let n02_aluno03 = lerTeclado.question(`Nota 2 do aluno ${aluno03}:`)
+// let n03_aluno03 = lerTeclado.question(`Nota 3 do aluno ${aluno03}:`)
 
-let estudante01 = {
-    nome: aluno01,
-    nota1:n01_aluno01,
-    nota2:n02_aluno01,
-    nota3:n03_aluno01
-}
+// let estudante01 = {
+//     nome: aluno01,
+//     nota1:n01_aluno01,
+//     nota2:n02_aluno01,
+//     nota3:n03_aluno01
+// }
 
-let estudante02 = {
-    nome: aluno02,
-    nota1:n01_aluno02,
-    nota2:n02_aluno02,
-    nota3:n03_aluno02
-}
+// let estudante02 = {
+//     nome: aluno02,
+//     nota1:n01_aluno02,
+//     nota2:n02_aluno02,
+//     nota3:n03_aluno02
+// }
 
-let estudante03 = {
-    nome: aluno03,
-    nota1:n01_aluno03,
-    nota2:n02_aluno03,
-    nota3:n03_aluno03
-}
+// let estudante03 = {
+//     nome: aluno03,
+//     nota1:n01_aluno03,
+//     nota2:n02_aluno03,
+//     nota3:n03_aluno03
+// }
 
-let turma = [estudante01, estudante02, estudante03]
+// let turma = [estudante01, estudante02, estudante03]
 
-console.table(turma)
-console.log(estudante02.nome, estudante01.nota1)
-console.log(estudante03.nome, estudante01.nota2)
-console.log(estudante01.nome, estudante01.nota3) 
+// console.table(turma)
+// console.log(estudante02.nome, estudante01.nota1)
+// console.log(estudante03.nome, estudante01.nota2)
+// console.log(estudante01.nome, estudante01.nota3) 
 
 
 
@@ -291,10 +291,10 @@ console.log(estudante01.nome, estudante01.nota3)
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui:
-let nome = lerTeclado.question("Nome:")
-let categoria = lerTeclado.question("Categoria:")
-let preco = lerTeclado.question("Preco:")
-let quantidadeestoque = lerteclado.question("estoquenode C:\Users\mateus_moller\AuladeProgramacao\atividade-03.js")
+// let nome = lerTeclado.question("Nome:")
+// let categoria = lerTeclado.question("Categoria:")
+// let preco = lerTeclado.questionInt("Preco:")
+// let quantidadeestoque = lerteclado.question("estoquenode C:\Users\mateus_moller\AuladeProgramacao\atividade-03.js")
 
 //console.log("_______________________________");
 
@@ -310,3 +310,31 @@ let quantidadeestoque = lerteclado.question("estoquenode C:\Users\mateus_moller\
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+
+// let medicamento1 = {
+//   nome: lerTeclado.question("Nome do medicamento 1: "),
+//   preco: lerTeclado.question("Preço do medicamento 1: "),
+//   emEstoque: lerTeclado.keyInYN("Está em estoque? (sim/não): ")
+// }
+
+// let medicamento2 = {
+//   nome: lerTeclado.question("\nNome do medicamento 2: "),
+//   preco: lerTeclado.question("Preço do medicamento 2: "),
+//   emEstoque: lerTeclado.keyInYN("Está em estoque? (sim/não): ")
+// };
+// let estoqueFarmacia = [];
+// estoqueFarmacia.push(medicamento1);
+// estoqueFarmacia.push(medicamento2);
+
+
+// console.log("Estoque da Farmácia");
+// console.table(estoqueFarmacia);
+
+
+// console.log("Medicamento 2:");
+// console.log("Nome:", estoqueFarmacia[1].nome);
+// console.log("Preço:", estoqueFarmacia[1].preco);
+
+
+// console.log("Medicamento 1:");
+// console.log("Nome:", estoqueFarmacia[0].nome);
