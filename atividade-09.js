@@ -63,7 +63,7 @@ let lerTeclado = require('readline-sync');
 
 // let usuario = lerTeclado.questionInt("Digite um numero inteiro: ")
 
-// for (let i = 1; i <= 10; i++ ) {
+// for (let i = 1; i <= 11; i++ ) {
 // let resultado = usuario * i;
 // console.log(`${usuario} x ${i} = ${resultado}`);
 
@@ -96,22 +96,37 @@ console.log("A soma de 1 até " + numInt + " é " + soma);
 // c) Exiba: "<N>! = <resultado>"
 
 // → Seu código aqui:
+// let inteiroN = lerTeclado.questionInt("Digite um numero inteiro de 1 a 10: ")
+// let fatorial = 1
+
+// for (let i = 1; i <= inteiroN ; i++) {
+//     fatorial = inteiroN  * i }
+
+//     console.log(`${inteiroN}! = ${fatorial}`)
 
 
-console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Percorrendo um array
 // ------------------------------------------------------------
 // a) Utilizando o array:
-    const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+    // const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 // b) Utilizando de um for, exiba cada cidade com seu índice no formato:
 //    "[<indice>] - <Cidade>"
 // c) Ao final, exiba: "Total de cidades: <quantidade>"
 
 // → Seu código aqui:
+// a) Array de cidades
+const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 
+// b) Percorrendo com for
+for (let i = 0; i < cidades.length; i++) {
+    console.log("[" + i + "] - " + cidades[i]);
+}
+
+// c) Total de cidades
+console.log("Total de cidades: " + cidades.length);
 
 console.log("_______________________________");
 
