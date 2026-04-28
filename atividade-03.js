@@ -318,7 +318,7 @@ let lerTeclado = require('readline-sync');
 // }
 
 // let medicamento2 = {
-//   nome: lerTeclado.question("\nNome do medicamento 2: "),
+//   nome: lerTeclado.question("Nome do medicamento 2: "),
 //   preco: lerTeclado.question("Preço do medicamento 2: "),
 //   emEstoque: lerTeclado.keyInYN("Está em estoque? (sim/não): ")
 // };

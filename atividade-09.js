@@ -77,14 +77,14 @@ let lerTeclado = require('readline-sync');
 // c) Exiba: "A soma de 1 até <N> é <soma>"
 
 // → Seu código aqui:
-let numInt = lerTeclado.questionInt("Digite um numero inteiro: ");
-let soma = 0;
+// let numInt = lerTeclado.questionInt("Digite um numero inteiro: ");
+// let soma = 0;
 
-for (let i = 1; i <= numInt; i++) {
-soma += i;
-}
+// for (let i = 1; i <= numInt; i++) {
+// soma += i;
+// }
 
-console.log("A soma de 1 até " + numInt + " é " + soma);
+// console.log("A soma de 1 até " + numInt + " é " + soma);
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Fatorial
@@ -118,15 +118,15 @@ console.log("A soma de 1 até " + numInt + " é " + soma);
 
 // → Seu código aqui:
 // a) Array de cidades
-const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+// const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 
-// b) Percorrendo com for
-for (let i = 0; i < cidades.length; i++) {
-    console.log("[" + i + "] - " + cidades[i]);
-}
+// // b) Percorrendo com for
+// for (let i = 0; i < cidades.length; i++) {
+//     console.log("[" + i + "] - " + cidades[i]);
+// }
 
-// c) Total de cidades
-console.log("Total de cidades: " + cidades.length);
+// // c) Total de cidades
+// console.log("Total de cidades: " + cidades.length);
 
 console.log("_______________________________");
 
@@ -143,8 +143,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25];
+let maior = temperaturas[0];
+let menor = temperaturas[0];
 
-console.log("_______________________________");
+for (let i = 1; i < temperaturas.length; i ++) {
+
+    if (temperaturas[i] > maior) {
+        maior = temperaturas[i];
+      }
+
+      if (temperaturas[i] < menor) {
+        menor = temperaturas[i];
+      }
+
+
+}
+console.log(`Maior temperatura: ${maior}°C`)
+console.log(`Menor temperatura: ${menor}°C`)
+
+
 
 
 // ------------------------------------------------------------
