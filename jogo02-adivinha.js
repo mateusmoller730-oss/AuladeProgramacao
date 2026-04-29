@@ -99,9 +99,9 @@ if (modo === 1) {
     }
 
     if (!acertou) {
-        console.log(`Fim de jogo! O número era ${secreto}.`);
+        console.log(`Fim de jogo! O número era ${secreto}.`);  
     }
-
+///
     // resumo final
     console.log("\n=== RESUMO ===");
     console.log(`Número secreto: ${secreto}`);
