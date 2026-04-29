@@ -204,7 +204,7 @@ console.log("_______________________________");
 // d) Usando outro for, exiba cada salário e se está acima ou abaixo da média:
 //    "R$ 1800,00 – Abaixo da média"
 //    "R$ 3200,00 – Acima da média"
-
+//
 
 
 
