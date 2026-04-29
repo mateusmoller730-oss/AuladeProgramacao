@@ -90,7 +90,7 @@ if (modo === 1) {
         } 
         else if (palpite > secreto) {
             console.log("Muito alto! Tente um número menor.");
-        } 
+        }                                                                           ////USAR SWITCH CASE
         else {
             console.log("Muito baixo! Tente um número maior.");
         }

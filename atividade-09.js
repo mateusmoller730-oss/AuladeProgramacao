@@ -110,23 +110,23 @@ let lerTeclado = require('readline-sync');
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Percorrendo um array
 // ------------------------------------------------------------
-// a) Utilizando o array:
-    // const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
-// b) Utilizando de um for, exiba cada cidade com seu índice no formato:
-//    "[<indice>] - <Cidade>"
-// c) Ao final, exiba: "Total de cidades: <quantidade>"
+//a) Utilizando o array:
+    //const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+///b) Utilizando de um for, exiba cada cidade com seu índice no formato:
+  // "[<indice>] - <Cidade>"
+//c) Ao final, exiba: "Total de cidades: <quantidade>"
 
-// → Seu código aqui:
+//→ Seu código aqui:
 // a) Array de cidades
-// const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 
-// // b) Percorrendo com for
-// for (let i = 0; i < cidades.length; i++) {
-//     console.log("[" + i + "] - " + cidades[i]);
-// }
+// b) Percorrendo com for
+for (let i = 0; i < cidades.length; i++) {
+    console.log(`[${i}] - ${cidades[i]}`);
+}
 
-// // c) Total de cidades
-// console.log("Total de cidades: " + cidades.length);
+// c) Total de cidades
+console.log(`Total de cidades: ${cidades.length}`);
 
 console.log("_______________________________");
 
@@ -168,14 +168,27 @@ console.log(`Menor temperatura: ${menor}°C`)
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Contando com condição
 // ------------------------------------------------------------
-// a) Utilizando do array:
-    const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
-// b) Usando um for, conte:
-//    - Quantas pessoas são menores de idade (< 18)
-//    - Quantas são maiores de idade (>= 18)
-// c) Exiba os dois totais.
+// // a) Array de idades
+const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
 
-// → Seu código aqui:
+// b) Contadores
+let menores = 0;
+let maiores = 0;
+
+// c) Percorrendo com for
+for (let i = 0; i < idades.length; i++) {
+
+    if (idades[i] < 18) {
+        menores++;
+    } else {
+        maiores++;
+    }
+}
+
+// d) Exibindo resultados
+console.log(`Menores de idade: ${menores}`);
+console.log(`Maiores de idade: ${maiores}`);
+
 
 
 console.log("_______________________________");
@@ -192,8 +205,18 @@ console.log("_______________________________");
 //    "R$ 1800,00 – Abaixo da média"
 //    "R$ 3200,00 – Acima da média"
 
-// → Seu código aqui:
 
+
+
+let soma = 0; 
+for (let i = 0; i < salarios.length; i++)
+{soma = soma+salarios[i]
+
+
+
+}
+console.log(`soma = ${soma}` 
+)
 
 console.log("_______________________________");
 
