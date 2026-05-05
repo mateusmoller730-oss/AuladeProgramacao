@@ -4,7 +4,7 @@
 // Instruções: resolva cada exercício no espaço indicado.
 // ============================================================
 let lerTeclado = require('readline-sync');
-
+//
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Switch simples com número
 // ------------------------------------------------------------
