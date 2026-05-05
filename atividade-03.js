@@ -8,7 +8,7 @@
 //     let lerTeclado = require('readline-sync');
 // Para executar:
 //    
-
+//
 //
 // Dica: Ao terminar um exercício, comente-o. Assim os dados não serão solicitados novamente.
 // ============================================================
