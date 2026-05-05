@@ -11,7 +11,7 @@
 // Dica: Ao terminar um exercício, comente-o. Assim os dados
 //       não serão solicitados novamente.
 // ============================================================
-
+//
 let lerTeclado = require('readline-sync');
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Comparando com == e ===
