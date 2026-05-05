@@ -94,25 +94,25 @@ console.log("_______________________________");
 // d) Ao final, exiba a soma, a quantidade de numeros digitados e quais foram os números digitados.
 
 // → Seu código aqui:
-let n = readline.questionInt("Adivinhe o numero:")
+// let n = readline.questionInt("Adivinhe o numero:")
 
-let soma = 0 
-let numeros = []
-numeros.push(n)
-let contador = 0
+// let soma = 0 
+// let numeros = []
+// numeros.push(n)
+// let contador = 0
 
-while(n != 0 ){
-    console.log("Errou.Tente novamente")
-    contador ++ 
-    soma +=n
-    n = readline.questionInt ("Adivinhe o numero: ")
-    numeros.push(n)
-    console.log(`Numeros digitados: ${numeros}`)
+// while(n != 0 ){
+//     console.log("Errou.Tente novamente")
+//     contador ++ 
+//     soma +=n
+//     n = readline.questionInt ("Adivinhe o numero: ")
+//     numeros.push(n)
+//     console.log(`Numeros digitados: ${numeros}`)
 
-}
+// }
 
-console.log(`soma das tentativas: ${soma}`)
-console.log(`Tentativas: ${contador}`)
+// console.log(`soma das tentativas: ${soma}`)
+// console.log(`Tentativas: ${contador}`)
 
 
 
@@ -124,9 +124,29 @@ console.log(`Tentativas: ${contador}`)
 // b) Calcule e exiba a média.
 
 // → Seu código aqui:
+let nota = readline.questionInt("Digite a nota (-1 para sair):");
+let soma = 0;
+let contador = 0;
 
+while (nota != -1) {
 
-console.log("_______________________________");
+    if (nota < 0 || nota > 10) {
+        console.log("Nota inválida.");
+    } else {
+        soma += Number(nota);
+        contador++;
+    }
+
+    nota = readline.questionInt("Digite a nota (-1 para sair):");
+}
+
+if (contador > 0) {
+    let media = soma / contador;
+    console.log("Média:", media);
+} else {
+    console.log("Nenhuma nota válida foi digitada.");
+}
+
 
 
 // ------------------------------------------------------------
@@ -141,7 +161,33 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let opcao;
 
+do {
+    opcao = prompt(
+        "1 - Exibir hora atual\n" +
+        "2 - Exibir data atual\n" +
+        "0 - Sair"
+    );
+
+    switch (opcao) {
+        case "1":
+            console.log(new Date().toLocaleTimeString());
+            break;
+
+        case "2":
+            console.log(new Date().toLocaleDateString());
+            break;
+
+        case "0":
+            console.log("Saindo...");
+            break;
+
+        default:
+            console.log("Opção inválida.");
+    }
+
+} while (opcao != "0");
 console.log("_______________________________");
 
 
@@ -160,6 +206,7 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let
 
 console.log("_______________________________");
 
