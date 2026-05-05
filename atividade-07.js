@@ -185,7 +185,7 @@ let lerTeclado = require('readline-sync');
 // c) Para alugar um carro, o motorista precisa ter 21 anos ou mais E possuir habilitação.
 //    - Se pode alugar → exiba: "<nome>, você pode alugar o veículo."
 //    - Senão          → exiba: "<nome>, você não atende aos requisitos."
-
+//
 // → Seu código aqui:
 
 // let motorista = {
