@@ -124,28 +124,28 @@ console.log("_______________________________");
 // b) Calcule e exiba a média.
 
 // → Seu código aqui:
-let nota = readline.questionInt("Digite a nota (-1 para sair):");
-let soma = 0;
-let contador = 0;
+// let nota = readline.questionInt("Digite a nota (-1 para sair):");
+// let soma = 0;
+// let contador = 0;
 
-while (nota != -1) {
+// while (nota != -1) {
 
-    if (nota < 0 || nota > 10) {
-        console.log("Nota inválida.");
-    } else {
-        soma += Number(nota);
-        contador++;
-    }
+//     if (nota < 0 || nota > 10) {
+//         console.log("Nota inválida.");
+//     } else {
+//         soma += Number(nota);
+//         contador++;
+//     }
 
-    nota = readline.questionInt("Digite a nota (-1 para sair):");
-}
+//     nota = readline.questionInt("Digite a nota (-1 para sair):");
+// }
 
-if (contador > 0) {
-    let media = soma / contador;
-    console.log("Média:", media);
-} else {
-    console.log("Nenhuma nota válida foi digitada.");
-}
+// if (contador > 0) {
+//     let media = soma / contador;
+//     console.log("Média:", media);
+// } else {
+//     console.log("Nenhuma nota válida foi digitada.");
+// }
 
 
 
@@ -161,34 +161,34 @@ if (contador > 0) {
 
 // → Seu código aqui:
 
-let opcao;
+// let opcao;
 
-do {
-    opcao = prompt(
-        "1 - Exibir hora atual\n" +
-        "2 - Exibir data atual\n" +
-        "0 - Sair"
-    );
+// do {
+//     opcao = prompt(
+//         "1 - Exibir hora atual\n" +
+//         "2 - Exibir data atual\n" +
+//         "0 - Sair"
+//     );
 
-    switch (opcao) {
-        case "1":
-            console.log(new Date().toLocaleTimeString());
-            break;
+//     switch (opcao) {
+//         case "1":
+//             console.log(new Date().toLocaleTimeString());
+//             break;
 
-        case "2":
-            console.log(new Date().toLocaleDateString());
-            break;
+//         case "2":
+//             console.log(new Date().toLocaleDateString());
+//             break;
 
-        case "0":
-            console.log("Saindo...");
-            break;
+//         case "0":
+//             console.log("Saindo...");
+//             break;
 
-        default:
-            console.log("Opção inválida.");
-    }
+//         default:
+//             console.log("Opção inválida.");
+//     }
 
-} while (opcao != "0");
-console.log("_______________________________");
+// } while (opcao != "0");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -206,9 +206,33 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+<<<<<<< HEAD
+=======
+// let secreto = Math.floor(Math.random() * 50) + 1;
+// let nome = readline.question("Digite o nome do jogador: ")
+
+// let chute = 0;
+// let tentativas = 0;
+
+// while (chute !== secreto) {
+//     chute = readline.questionInt("Digite seu palpite de 1 a 50: ")
+//     tentativas++;
+
+//     if (chute > secreto ) {
+//         console.log("Muito alto! Tente menor.")
+//     }
+
+//     else if (chute < secreto) {
+//         console.log("Muito baixo! Tente maior.")
+//     }
+    
+// }
+    
+
+// console.log(`${nome} acertou após ${tentativas} tentativa(s)! O número era ${secreto}.`);
+>>>>>>> ead42412a46f75d8bd204315622e5befe5e3f854
 
 
-console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -219,6 +243,18 @@ console.log("_______________________________");
 //    Formato para exibição: "<número> x <i> = <resultado>"
 
 // → Seu código aqui:
+
+// let i = 1;
+// let numero = readline.questionInt("Digite um numero inteiro: ")
+
+// while (i <= 10 ) {
+// let resultado = numero * i;
+// console.log(`${numero} x ${i} = ${resultado}`)
+// i = i + 1;
+// }
+
+
+
 
 
 console.log("_______________________________");
@@ -237,6 +273,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let saldo = 1000
+let rodada = 0;
+
+
+while (saldo >= 0 && saldo > 0 )
+let saque = Math.floor(Math.random() * 151) + 50;
+
+if (saque > saldo) {
+console.log("Saldo insuficiente. Fim!")
+
+}
+else{
+saldo = saldo - saque;
+}
 
 console.log("_______________________________");
 
