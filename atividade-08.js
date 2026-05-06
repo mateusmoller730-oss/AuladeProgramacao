@@ -404,7 +404,48 @@ console.table(produto);
 //    No default, exiba: "Operação inválida."
 
 // → Seu código aqui:
+// let numeroA = questionFloat("Digite o primeiro número:");
+// let numeroB = questionFloat("Digite o segundo número:");
 
+// console.log(
+// "1 - Soma\n" +
+// "2 - Subtração\n" +
+// "3 - Multiplicação\n" +
+// "4 - Divisão\n" +
+// "5 - Resto"
+// );
+
+// let op = questionInt("Escolha a operação:");
+
+// switch (op) {
+
+//     case 1:
+//         console.log(numeroA + " + " + numeroB + " = " + (numeroA + numeroB));
+//         break;
+
+//     case 2:
+//         console.log(numeroA + " - " + numeroB + " = " + (numeroA - numeroB));
+//         break;
+
+//     case 3:
+//         console.log(numeroA + " * " + numeroB + " = " + (numeroA * numeroB));
+//         break;
+
+//     case 4:
+//         if (numeroB == 0) {
+//             console.log("Erro: divisão por zero não é permitida.");
+//         } else {
+//             console.log(numeroA + " / " + numeroB + " = " + (numeroA / numeroB));
+//         }
+//         break;
+
+//     case 5:
+//         console.log(numeroA + " % " + numeroB + " = " + (numeroA % numeroB));
+//         break;
+
+//     default:
+//         console.log("Operação inválida.");
+// }
 
 console.log("_______________________________");
 

@@ -121,12 +121,12 @@ let lerTeclado = require('readline-sync');
 const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 
 // b) Percorrendo com for
-for (let i = 0; i < cidades.length; i++) {
-    console.log(`[${i}] - ${cidades[i]}`);
-}
+// for (let i = 0; i < cidades.length; i++) {
+//     console.log(`[${i}] - ${cidades[i]}`);
+
 
 // c) Total de cidades
-console.log(`Total de cidades: ${cidades.length}`);
+// console.log(`Total de cidades: ${cidades.length}`);
 
 console.log("_______________________________");
 
@@ -143,24 +143,24 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25];
-let maior = temperaturas[0];
-let menor = temperaturas[0];
+// const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25];
+// let maior = temperaturas[0];
+// let menor = temperaturas[0];
 
-for (let i = 1; i < temperaturas.length; i ++) {
+// for (let i = 1; i < temperaturas.length; i ++) {
 
-    if (temperaturas[i] > maior) {
-        maior = temperaturas[i];
-      }
+//     if (temperaturas[i] > maior) {
+//         maior = temperaturas[i];
+//       }
 
-      if (temperaturas[i] < menor) {
-        menor = temperaturas[i];
-      }
+//       if (temperaturas[i] < menor) {
+//         menor = temperaturas[i];
+//       }
 
 
-}
-console.log(`Maior temperatura: ${maior}°C`)
-console.log(`Menor temperatura: ${menor}°C`)
+// }
+// console.log(`Maior temperatura: ${maior}°C`)
+// console.log(`Menor temperatura: ${menor}°C`)
 
 
 
@@ -169,25 +169,25 @@ console.log(`Menor temperatura: ${menor}°C`)
 // EXERCÍCIO 9 – Contando com condição
 // ------------------------------------------------------------
 // // a) Array de idades
-const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
+// const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
 
 // b) Contadores
-let menores = 0;
-let maiores = 0;
+// let menores = 0;
+// let maiores = 0;
 
 // c) Percorrendo com for
-for (let i = 0; i < idades.length; i++) {
+// for (let i = 0; i < idades.length; i++) {
 
-    if (idades[i] < 18) {
-        menores++;
-    } else {
-        maiores++;
-    }
-}
+//     if (idades[i] < 18) {
+//         menores++;
+//     } else {
+//         maiores++;
+//     }
+// }
 
 // d) Exibindo resultados
-console.log(`Menores de idade: ${menores}`);
-console.log(`Maiores de idade: ${maiores}`);
+// console.log(`Menores de idade: ${menores}`);
+// console.log(`Maiores de idade: ${maiores}`);
 
 
 
@@ -208,15 +208,27 @@ console.log("_______________________________");
 
 
 
-let soma = 0; 
-for (let i = 0; i < salarios.length; i++)
-{soma = soma+salarios[i]
+// let soma = 0; 
+// for (let i = 0; i < salarios.length; i++)
+// {soma = soma+salarios[i]
 
 
 
-}
-console.log(`soma = ${soma}` 
-)
+// }
+// console.log(`soma = ${soma}` 
+// )
+
+
+
+
+
+
+
+
+
+
+
+
 
 console.log("_______________________________");
 
@@ -239,9 +251,67 @@ console.log("_______________________________");
 // g) Exiba o array 'turma' com console.table().
 
 // → Seu código aqui:
+let turma = [];
 
+// a, b, c → entrada e criação dos objetos
+for (let i = 0; i < 3; i++) {
+  let nome = lerTeclado.question(`Digite o nome do ${i + 1}º aluno:`);
 
-console.log("_______________________________");
+  let notas = [];
+  for (let j = 0; j < 3; j++) {
+    let nota = lerTeclado.questionInt(`Digite a ${j + 1}ª nota de ${nome}:`);
+    notas.push(nota);
+  }
+
+  let aluno = {
+    nome: nome,
+    notas: notas
+  };
+
+  turma.push(aluno);
+}
+
+// d → média da turma
+let somaTotal = 0;
+let totalNotas = 0;
+
+for (let i = 0; i < turma.length; i++) {
+  for (let j = 0; j < turma[i].notas.length; j++) {
+    somaTotal += turma[i].notas[j];
+    totalNotas++;
+  }
+}
+
+let media = somaTotal / totalNotas;
+
+// e → situação de cada aluno
+for (let i = 0; i < turma.length; i++) {
+  let soma = 0;
+
+  for (let j = 0; j < turma[i].notas.length; j++) {
+    soma += turma[i].notas[j];
+  }
+
+  let mediaAluno = soma / turma[i].notas.length;
+
+  let situacao = "";
+
+  if (mediaAluno >= 7) {
+    situacao = "Aprovado";
+  } else if (mediaAluno >= 5) {
+    situacao = "Recuperação";
+  } else {
+    situacao = "Reprovado";
+  }
+
+  console.log(`${turma[i].nome}: ${mediaAluno.toFixed(2)} – ${situacao}`);
+}
+
+// f → média da turma
+console.log(`Média da turma: ${media.toFixed(2)}`);
+
+// g → tabela
+console.table(turma);
 
 
 // ------------------------------------------------------------
