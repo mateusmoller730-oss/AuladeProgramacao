@@ -16,16 +16,14 @@
 
 // → Seu código aqui:
 
-// let n = 1
-// while (n < 8 ){
-//     console.log(`numero = ${n}`)
-//     n++
+// let n = 1;
 
-//     if(n === 8)
-//     console.log(`fim da contagem!`)
+// while (n <= 7) {
+//     console.log(n);
+//     n++;
 // }
 
-
+console.log("Fim da contagem!");
 
 
 // ------------------------------------------------------------
@@ -205,9 +203,6 @@ console.log("_______________________________");
 //    "<nome> acertou após <tentativas> tentativa(s)! O número era <secreto>."
 
 // → Seu código aqui:
-
-<<<<<<< HEAD
-=======
 // let secreto = Math.floor(Math.random() * 50) + 1;
 // let nome = readline.question("Digite o nome do jogador: ")
 
@@ -230,7 +225,7 @@ console.log("_______________________________");
     
 
 // console.log(`${nome} acertou após ${tentativas} tentativa(s)! O número era ${secreto}.`);
->>>>>>> ead42412a46f75d8bd204315622e5befe5e3f854
+
 
 
 

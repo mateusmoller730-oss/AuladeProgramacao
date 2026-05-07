@@ -11,7 +11,14 @@
 //    "Primeiro múltiplo de 7 acima de 30: <número>" e encerre o laço com break.
 
 // → Seu código aqui:
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
 
+  if (i % 7 === 0 && i > 30) {
+      console.log(`Primeiro múltiplo de 7 acima de 30: ${i}`);
+      break;
+  }
+}
 
 console.log("_______________________________");
 
@@ -27,8 +34,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let contador = 0;
 
-console.log("_______________________________");
+for (let i = 0; i < letras.length; i++) {
+    let letra = letras[i];
+
+    if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+        continue;
+    }
+
+    console.log(letra);
+    contador++;
+}
+
+console.log(`Consoantes exibidas: ${contador}`);
+
+
 
 
 // ------------------------------------------------------------
@@ -45,7 +66,22 @@ const notasAlunoB = [8, 4.5, 6.3, 9];
 // d) Teste com dois arrays:
 
 // → Seu código aqui:
+const notasAlunoA = [8, 7, 6.2, 9, 5, 7.5, 9, 8.9, 2.2, 10, 7.4];
+const notasAlunoB = [8, 4.5, 6.3, 9];
 
+function verificarAprovacao(notas) {
+    for (let i = 0; i < notas.length; i++) {
+        if (notas[i] < 5) {
+            return `Reprovado na nota ${notas[i]} (índice ${i})`;
+        }
+    }
+
+    return "Aprovado!";
+}
+
+// Testes
+console.log(verificarAprovacao(notasAlunoA));
+console.log(verificarAprovacao(notasAlunoB));
 
 console.log("_______________________________");
 
