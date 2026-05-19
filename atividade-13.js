@@ -49,9 +49,9 @@
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
    const m = [
-     [12,  7, 25],
-     [ 3, 18,  9],
-     [31, 14, 22],
+     [12,  7, 25, 4],
+     [ 3, 18,  9, 5],
+     [31, 14, 22, 99],
    ];
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
@@ -67,8 +67,9 @@ let colunaMaior = 0;
 let linhaMenor = 0;
 let colunaMenor = 0;
 
-for (let i = 0; i < m.length; i++) {
-  for (let j = 0; j < m[i].length; j++) {
+for (let i = 0; i < m.length; i++) {       //linha
+  for (let j = 0; j < m[i].length; j++) {         //coluna
+    console.log(m[i][j]);
 
     if (m[i][j] > maior) {
       maior = m[i][j];
@@ -136,7 +137,7 @@ for (let i = 0; i < m.length; i++) {
 }
 
 console.log("Diagonal principal:", diagonal);
-console.log("_______________________________");
+
 
 
 // ------------------------------------------------------------
