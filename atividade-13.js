@@ -3,6 +3,8 @@
 // ============================================================
 
 
+let lerTeclado = require('readline-sync');
+
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Lendo uma matriz
 // ------------------------------------------------------------
@@ -69,7 +71,7 @@ let colunaMenor = 0;
 
 for (let i = 0; i < m.length; i++) {       //linha
   for (let j = 0; j < m[i].length; j++) {         //coluna
-    console.log(m[i][j]);
+    
 
     if (m[i][j] > maior) {
       maior = m[i][j];
@@ -103,40 +105,40 @@ console.log("Posição do menor:", linhaMenor, colunaMenor);
 
 // → Seu código aqui:
 
-const m = [
-  [12, 7, 25],
-  [3, 18, 9],
-  [31, 14, 22],
-];
+// const m = [
+//   [12, 7, 25],
+//   [3, 18, 9],
+//   [31, 14, 22],
+// ];
 
 
-for (let i = 0; i < m.length; i++) {
-  let somaLinha = 0;
+// for (let i = 0; i < m.length; i++) {
+//   let somaLinha = 0;
 
-  for (let j = 0; j < m[i].length; j++) {
-    somaLinha += m[i][j];
-  }
+//   for (let j = 0; j < m[i].length; j++) {
+//     somaLinha += m[i][j];
+//   }
 
-  console.log("Linha " + i + ": " + somaLinha);
-}
+//   console.log("Linha " + i + ": " + somaLinha);
+// }
 
-for (let j = 0; j < m[0].length; j++) {
-  let somaColuna = 0;
+// for (let j = 0; j < m[0].length; j++) {
+//   let somaColuna = 0;
 
-  for (let i = 0; i < m.length; i++) {
-    somaColuna += m[i][j];
-  }
+//   for (let i = 0; i < m.length; i++) {
+//     somaColuna += m[i][j];
+//   }
 
-  console.log("Coluna " + j + ": " + somaColuna);
-}
+//   console.log("Coluna " + j + ": " + somaColuna);
+// }
 
-let diagonal = 0;
+// let diagonal = 0;
 
-for (let i = 0; i < m.length; i++) {
-  diagonal += m[i][i];
-}
+// for (let i = 0; i < m.length; i++) {
+//   diagonal += m[i][i];
+// }
 
-console.log("Diagonal principal:", diagonal);
+// console.log("Diagonal principal:", diagonal);
 
 
 
@@ -150,5 +152,19 @@ console.log("Diagonal principal:", diagonal);
 
 // → Seu código aqui:
 
+// let matriz = []
+// let qlinhas = lerTeclado.question("Quantas linhas tem a matriz? ")
+// let qcolunas = lerTeclado.question("Quantas colunas tem a matriz? ")
 
-console.log("_______________________________");
+// for(let i = 0; i <  qlinhas; i++){
+// matriz [i] = []
+
+// for(let j = 0; j < qcolunas; j++)
+  
+//     matriz [i] [j] = Number(
+//        lerTeclado.question(`Digite o valor para [${i}][${j}]:`)
+//     )
+//   }
+
+// console.table(matriz)
+
