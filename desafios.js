@@ -15,8 +15,39 @@
 
 // → Seu código aqui:
 
+let lerTeclado = require('readline-sync')();
+
+let tabuleiro = [
+  ["-", "-", "-"],
+  ["-", "-", "-"],
+  ["-", "-", "-"]
+];
+
+
+
+for (let jogada = 0; jogada < 5; jogada++)
+
+let jogador;
+
+if (jogada % 2 == 0) {
+  jogador = "X";
+} else {
+  jogador = "O";
+}
+
+linha = lerTeclado.question("Linha: ");
+coluna = lerTeclado.question("Coluna: ");
+
+while (tabuleiro[linha][coluna] != "-") {
+
+  console.log("Posição ocupada!");
+
+  linha = Number(lerTeclado.question("Linha: "));
+  coluna = Number(lerTeclado.question("Coluna: "));
+}
 
 console.log("_______________________________");
+
 
 
 // ------------------------------------------------------------
