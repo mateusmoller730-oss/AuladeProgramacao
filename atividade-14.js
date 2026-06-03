@@ -6,7 +6,7 @@
 // As funções devem apenas executar um bloco de código.
 //
 // ============================================================
-
+let lerTeclado = require("readline-sync");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Primeira função
@@ -82,39 +82,38 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let lerTeclado = require("readline-sync");
 
-let usuarios = [];
+// let usuarios = [];
 
-function meusDados() {
+// function meusDados() {
 
-    for (let i = 0; i < 2; i++) {
+//     for (let i = 0; i < 2; i++) {
 
-        let usuario = {
-            nome: lerTeclado.question("Digite o nome: "),
-            idade: lerTeclado.question("Digite a idade: "),
-            cidade: lerTeclado.question("Digite a cidade: ")
-        };
+//         let usuario = {
+//             nome: lerTeclado.question("Digite o nome: "),
+//             idade: lerTeclado.questionInt("Digite a idade: "),
+//             cidade: lerTeclado.question("Digite a cidade: ")
+//         };
 
-        usuarios.push(usuario);
-    }
+//         usuarios.push(usuario);
+//     }
 
-    exibirDados();
-}
+//     exibirDados();
+// }
 
-function exibirDados() {
+// function exibirDados() {
 
-    for (let i = 0; i < usuarios.length; i++) {
+//     for (let i = 0; i < usuarios.length; i++) {
 
-        console.log("-------------------------");
-        console.log("Nome:   " + usuarios[i].nome);
-        console.log("Idade:  " + usuarios[i].idade);
-        console.log("Cidade: " + usuarios[i].cidade);
-        console.log("-------------------------");
-    }
-}
+//         console.log("-------------------------");
+//         console.log("Nome:   " + usuarios[i].nome);
+//         console.log("Idade:  " + usuarios[i].idade);
+//         console.log("Cidade: " + usuarios[i].cidade);
+//         console.log("-------------------------");
+//     }
+// }
 
-meusDados();
+// meusDados();
 console.log("_______________________________");
 
 
@@ -128,6 +127,17 @@ console.log("_______________________________");
 // b) Execute a função 5 vezes - tente fazer sem digitar a função 5 vezes.
 
 // → Seu código aqui:
+
+// function sortear() {
+//     let numero = Math.floor(Math.random() * 100) + 1;
+//     console.log("Numero sorteado:"  + numero);
+// }
+
+//     for(let i = 0; i < 5 ;i++) 
+//     {
+//     sortear()
+//     }
+
 
 
 console.log("_______________________________");
@@ -147,6 +157,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function tabuadaDoCinco(){                                          
+//     for (let i = 1; i <= 10; i++) {
+//         console.log("5" + " x " + i + " = " + (5 * i));
+//     }
+// }
+
+// function tabuadaDoSete(){
+//     for (let i = 1; i <= 10; i++) {
+//         console.log("7" + " x " + i + " = " + (7 * i));
+//     }
+// }
+
+// tabuadaDoCinco();
+
+// tabuadaDoSete();
+
 
 console.log("_______________________________");
 
@@ -162,6 +188,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function converterTemperatura(){    
+
+// let celsius = Number(lerTeclado.question("Digite a temperatura em Celsius: "));
+// console.log("Temperatura: " + celsius + "°C");
+
+// let Fahrenheit = celsius * 1.2 + 32
+
+// console.log(celsius + "°C equivalem a " + Fahrenheit + "°F");
+
+
+// }
+// converterTemperatura()
+// converterTemperatura()
+// converterTemperatura()
 
 console.log("_______________________________");
 
@@ -176,7 +216,17 @@ console.log("_______________________________");
 // c) Chame listarFilmes() duas vezes.
 
 // → Seu código aqui:
+    
 
+// function listarFilmes() {
+//     for (let i = 0; i < filmes.length; i++) {
+//         console.log((i + 1) + " - " + filmes[i]);
+//     }
+// }
+
+// listarFilmes();
+
+// listarFilmes();
 
 console.log("_______________________________");
 
@@ -196,6 +246,37 @@ console.log("_______________________________");
 // E chame a função principal.
 
 // → Seu código aqui:
+
+// function limparTela() {
+//     for (let i = 0; i < 30; i++) {
+//         console.log("");
+//     }
+// }
+
+// function banner() {
+//     console.log("--------------------");
+//     console.log(" MINI SISTEMA ");
+//     console.log("--------------------");
+// }
+
+// function pedirNome() {
+//     let nome = lerTeclado.question("Digite seu nome:");
+//     console.log("Olá, " + nome + "!");
+// }
+
+// function rodape() {
+//     console.log("Sistema desenvolvido por Mateus Möller");
+// }
+
+// function funcaoPrincipal(){
+//     limparTela(); 
+//     banner(); 
+//     pedirNome(); 
+//     rodape();
+
+// }
+
+// funcaoPrincipal()
 
 
 console.log("_______________________________");
@@ -217,6 +298,77 @@ console.log("_______________________________");
 //    correspondente em cada case. Encerre quando o usuário digitar 0.
 
 // → Seu código aqui:
+function opcaoSomar() {
+    let n1 = Number(lerTeclado.question("Digite o primeiro número: "));
+    let n2 = Number(lerTeclado.question("Digite o segundo número: "));
+    console.log("Soma = " + (n1 + n2));
+}
+
+function opcaoSubtrair() {
+    let n1 = Number(lerTeclado.question("Digite o primeiro número: "));
+    let n2 = Number(lerTeclado.question("Digite o segundo número: "));
+    console.log("Subtração = " + (n1 - n2));
+}
+
+function opcaoMultiplicar() {
+    let n1 = Number(lerTeclado.question("Digite o primeiro número: "));
+    let n2 = Number(lerTeclado.question("Digite o segundo número: "));
+    console.log("Multiplicação = " + (n1 * n2));
+}
+
+function opcaoDividir() {
+    let n1 = Number(lerTeclado.question("Digite o primeiro número: "));
+    let n2 = Number(lerTeclado.question("Digite o segundo número: "));
+
+    if (n2 == 0) {
+        console.log("Erro: divisão por zero!");
+    } else {
+        console.log("Divisão = " + (n1 / n2));
+    }
+}
+
+function exibirMenu() {
+    console.log("===== MENU =====");
+    console.log("1 - Somar");
+    console.log("2 - Subtrair");
+    console.log("3 - Multiplicar");
+    console.log("4 - Dividir");
+    console.log("0 - Sair");
+}
+
+let opcao;
+
+do {
+    exibirMenu();
+
+    opcao = Number(lerTeclado.question("Escolha uma opção: "));
+
+    switch (opcao) {
+        case 1:
+            opcaoSomar();
+            break;
+
+        case 2:
+            opcaoSubtrair();
+            break;
+
+        case 3:
+            opcaoMultiplicar();
+            break;
+
+        case 4:
+            opcaoDividir();
+            break;
+
+        case 0:
+            console.log("Programa encerrado.");
+            break;
+
+        default:
+            console.log("Opção inválida!");
+    }
+
+} while (opcao != 0);
 
 
 console.log("_______________________________");
