@@ -84,31 +84,32 @@ console.log("_______________________________");
 
 
 
-// function ehPar(n) {
-//     return n % 2 === 0 
+function ehPar(n) {
+    return !(n % 2 === 0)
     
-// }
+}
 
-// function ehMaiorDeIdade(idade) {
-//     if(idade>= 18)
-//     return true 
+function ehMaiorDeIdade(idade) {
+    if(idade>= 18)
+    return true 
 
 
-// }
+}
 
-// function ehVogal(letra) {
-//     letra = letra.toLowerCase()
+function ehVogal(letra) {
+    letra = letra.toLowerCase()
 
-//      return letra === "a" ||
-//         letra === "e" ||
-//         letra === "i" ||
-//         letra === "o" ||
-//         letra === "u";
-// }
+     return letra === "a" ||
+        letra === "e" ||
+        letra === "i" ||
+        letra === "o" ||
+        letra === "u";
+}
 
-// console.log(ehPar("3"))
-// console.log(ehMaiorDeIdade("18"));
-// console.log(ehVogal("a"))
+
+console.log(ehPar("3"))
+console.log(ehMaiorDeIdade("18"));
+console.log(ehVogal("a"))
 
 // ------------------------------------------------------------
 // EXERCÍCIO 4 – Múltiplos returns (early return)
@@ -124,14 +125,33 @@ console.log("_______________________________");
 //    "IMC: <valor> – <classificação>"
 
 // → Seu código aqui:
+let lerTeclado = require("readline-sync");
 
-function classificarIMC(imc) {
-    if(imc < 18.5)
-    return "Abaixo do peso"
+let peso =lerTeclado.question("Digite seu peso (kg):");
+let altura =lerTeclado.question("Digite sua altura (m):");
+
+
+function calcularIMC(peso, altura) {
+    let imc =  peso / (altura ** 2);
+    return imc 
 }
-    else id
+function classificarIMC(imc){
+    if (imc < 18.5) {
+        return "Abaixo do peso";
+    } else if (imc < 25) {
+        return "Peso normal";
+    } else if (imc < 30) {
+        return "Sobrepeso";
+    } else {
+        return "Obesidade";
+    }
+}
 
-function 
+
+
+
+
+console.log(`IMC: ${imc.toFixed(2)} – ${classificacao}`);
 
 
 
