@@ -85,7 +85,7 @@ console.log("_______________________________");
 
 
 // function ehPar(n) {
-//     return n % 2 === 0 
+//     return !(n % 2 === 0)
     
 // }
 
@@ -106,6 +106,7 @@ console.log("_______________________________");
 //         letra === "u";
 // }
 
+
 // console.log(ehPar("3"))
 // console.log(ehMaiorDeIdade("18"));
 // console.log(ehVogal("a"))
@@ -124,14 +125,33 @@ console.log("_______________________________");
 //    "IMC: <valor> – <classificação>"
 
 // → Seu código aqui:
+// let lerTeclado = require("readline-sync");
 
-function classificarIMC(imc) {
-    if(imc < 18.5)
-    return "Abaixo do peso"
-}
-    else id
+// let peso =lerTeclado.question("Digite seu peso (kg):");
+// let altura =lerTeclado.question("Digite sua altura (m):");
 
-function 
+
+// function calcularIMC(peso, altura) {
+//     let imc =  peso / (altura ** 2);
+//     return imc 
+// }
+// function classificarIMC(imc){
+//     if (imc < 18.5) {
+//         return "Abaixo do peso";
+//     } else if (imc < 25) {
+//         return "Peso normal";
+//     } else if (imc < 30) {
+//         return "Sobrepeso";
+//     } else {
+//         return "Obesidade";
+//     }
+// }
+
+
+
+
+
+// console.log(`IMC: ${imc.toFixed(2)} – ${classificacao}`);
 
 
 
@@ -151,6 +171,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function precoComDesconto(valor, desconto = 10) {
+// return valor * (1 - desconto / 100)
+ 
+// }
+
+// console.log(precoComDesconto(100))
+// console.log(precoComDesconto(250, 5))
+// console.log(precoComDesconto(100, 25))
 
 console.log("_______________________________");
 
@@ -168,6 +196,30 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
+// function somarVetor(vet){
+//     let soma = 0
+//     for ( const numero of numeros ){
+//     soma += numero
+// }
+
+//     return soma
+// }
+
+// function mediaVetor(vet){
+//     return somarVetor(vet) / numeros.length
+// }
+
+// function maiordoVetor(vet){
+//     return Math.max(vet);
+
+// }
+
+
+
+// console.log("Soma:", somarVetor(numeros));
+// console.log("Média:", mediaVetor(numeros));
+// console.log("Maior:", mediaVetor(numeros));
+
 console.log("_______________________________");
 
 
@@ -182,7 +234,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function verificarSituacao(nota) {
+  return nota >= 7 ? "Aprovado" : "Reprovado";
+}
 
+function criarAluno(nome, idade, nota) {
+  return {
+    nome,
+    idade,
+    nota,
+    situacao: verificarSituacao(nota)
+  };
+}
+
+
+let a1 = criarAluno("Mateus", 20, 8);
+let a2 = criarAluno("Bruno", 22, 5);
+let a3 = criarAluno("Pedro", 19, 7);
+
+
+console.table([a1, a2, a3]);
 console.log("_______________________________");
 
 
@@ -197,6 +268,37 @@ console.log("_______________________________");
 // d) Combine: gere pares de 1 a 50 e filtre os maiores que 30.
 
 // → Seu código aqui:
+
+function gerarPares(inicio, fim) {
+    let pares = [];
+  
+    for (let i = inicio; i <= fim; i++) {
+      if (i % 2 === 0) {
+        pares.push(i);
+      }
+    }
+  
+    return pares;
+  }
+  
+  function filtrarMaioresQue(vet, limite) {
+    let filtrado = [];
+  
+    for (const valor of vet) {
+      if (valor > limite) {
+        filtrado.push(valor);
+      }
+    }
+  
+    return filtrado;
+  }
+  
+  let pares50 = gerarPares(1, 50);
+  let maioresQue30 = filtrarMaioresQue(pares50, 30);
+  
+  console.log("Pares:", pares50);
+  console.log("Maiores que 30:", maioresQue30);
+
 
 
 console.log("_______________________________");
