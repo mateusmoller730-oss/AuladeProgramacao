@@ -1,5 +1,5 @@
 // ============================================================
-// ATIVIDADE 15 – Funções com Parâmetros e Retornos
+// ATIVIDADE 15 –  Funções com Parâmetros e Retornos
 // ============================================================
 //
 // IMPORTANTE: a partir de agora, as funções devem RECEBER

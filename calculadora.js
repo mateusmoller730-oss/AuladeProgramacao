@@ -13,7 +13,7 @@ let readline = require("readline-sync");
 
 for (;;) {
 
-                                                            // Entrada de dados
+                                                         // Entrada de dados
   let numero1 = Number(readline.question("Digite o primeiro numero: "));
   
   let operador = readline.question(
