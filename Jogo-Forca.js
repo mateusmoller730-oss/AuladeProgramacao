@@ -112,6 +112,7 @@ function mostrar(vetor) {
 
 function ganhou(vetor) {
     for (let i = 0; i < vetor.length; i++) {
+    
         if (vetor[i] == "_") {
             return false;
         }
@@ -128,17 +129,13 @@ function mostrarLetrasErradas(letrasErradas) {
 }
 
 
-function verificarLetra(palavra, oculta, letra) {
-    let achou = false;
 
-    for (let i = 0; i < palavra.length; i++) {
-        if (palavra[i] == letra) {
-            oculta[i] = letra;
-            achou = true;
-        }
+function mostrar(vetor) {
+    let texto = "";
+    for (let i = 0; i < vetor.length; i++) {
+        texto += vetor[i] + " ";
     }
-
-    return achou;
+    console.log(" Palavra: " + texto);
 }
 
 function jogar() {

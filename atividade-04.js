@@ -147,7 +147,7 @@
 // console.log(`nivel 03: ${nivel}`)
 
 // ------------------------------------------------------------
-// EXERCÍCIO 6 – Funções matemáticas (Math)
+// EXERCÍCIO 6 – Funções matematicas (Math)
 // ------------------------------------------------------------
 // a) Declare "nota" com o valor 7.3.
 // b) Exiba o resultado de Math.round(nota), Math.floor(nota) e Math.ceil(nota).
