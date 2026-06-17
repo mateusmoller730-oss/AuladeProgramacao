@@ -9,9 +9,9 @@
 //     node atividade-04.js
 //
 // Dica: Ao terminar um exercício, comente-o. Assim os dados
-//       não serão solicitados novamente.
+//       não serão solicitados novament.
 // ============================================================
-
+//
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Operações básicas
