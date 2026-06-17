@@ -68,7 +68,7 @@ console.log("_______________________________");
 // let temCNH = 'true'
 // //c
 // console.log(typeof maiorDeIdade)
-// console.log(typeof temCNH)
+// console.log(typeof temCNH
 
 
 console.log("_______________________________");
@@ -80,7 +80,7 @@ console.log("_______________________________");
 // a) Declare uma variável "apelido" sem atribuir nenhum valor.
 // b) Declare uma variável "enderecoAtual" e atribua null intencionalmente.
 // c) Exiba as duas variáveis e seus respectivos tipos (typeof).
-// d) Explique (em um comentário) por que typeof null retorna "object".
+// d) Explique (em um comentário) por que typeof null retorna "object"...
 
 // → Seu código aqui:
 // //a
