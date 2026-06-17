@@ -10,14 +10,14 @@
 // EXERCÍCIO 1 – Apresentação criativa
 // ------------------------------------------------------------
 // Crie variáveis para nome, idade e hobby favorito.
-// Monte uma frase usando template literal que se apresente e diga o que gosta de fazer.
+// Monte uma frase usando template literal que se apresente e diga o que gosta de faze.
 
 // → Seu código aqui:
 //const nome = `Mateus`
 //let idade = 16
 //let hobby = `volei`
 //let apresentacao = `me chamo ${nome} tenho ${idade} anos e gosto de jogar ${hobby}`
-
+//
 
 //console.log(apresentacao)
 
