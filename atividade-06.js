@@ -192,10 +192,14 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let ehEstudante = lerTeclado.keyInYN("Você é bolsista?");
-// let pagaMais = lerTeclado.keyInYN("Estudante paga mais que R$ 1000,00 mensais pelo curso?");
-// let mensagem =(ehEstudante && pagaMaisDe1000)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
-// console.log(`Situação do aluno: Bolsista? ${ehEstudante}, Paga mais que R$ 1000,00? ${pagaMais}. ${mensagem}`);
+let ehEstudante = lerTeclado.keyInYN("Você é bolsista? ");
+let pagaMais = lerTeclado.keyInYN("Paga mais que R$ 1000,00 por mês? ");
+
+let mensagem = (ehEstudante && pagaMais)
+    ? "Desconto aplicado!"
+    : "Desconto não aplicado.";
+
+console.log(`${mensagem}`);
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Verificação de acesso com input
@@ -215,6 +219,27 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
+let pessoa = {
+    idade: lerTeclado.questionInt("Digite sua idade: "),
+    possuiIngresso: lerTeclado.keyInYN("Possui ingresso? "),
+    ehAssociado: lerTeclado.keyInYN("É associado ao clube? ")
+};
+
+let verificacoes = {
+    podeEntrarNormal: (pessoa.idade >= 18 && pessoa.possuiIngresso) || pessoa.ehAssociado,
+    podeEntrarSocio: pessoa.possuiIngresso && pessoa.ehAssociado,
+    precisaAcompanhante: pessoa.idade < 18,
+    naoPodeEntrar: !pessoa.possuiIngresso && !pessoa.ehAssociado
+};
+
+console.table(verificacoes);
+
+let mensagemFinal =
+    (verificacoes.podeEntrarNormal || verificacoes.podeEntrarSocio)
+    ? "Entrada liberada!"
+    : "Entrada negada.";
+
+console.log(mensagemFinal);
 
 console.log("_______________________________");
 
@@ -235,6 +260,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let produto = {
+    nome: lerTeclado.question("Nome do produto: "),
+    quantidade: lerTeclado.questionInt("Quantidade em estoque: "),
+    ativo: lerTeclado.keyInYN("Produto ativo no sistema? ")
+};
+
+let temEstoque = produto.quantidade > 0;
+let produtoDisponivel = temEstoque && produto.ativo;
+let produtoIndisponivel = !temEstoque || !produto.ativo;
+
+console.log(`Produto: ${produto.nome}`);
+console.log(`Tem estoque: ${temEstoque}`);
+console.log(`Produto disponível: ${produtoDisponivel}`);
+console.log(`Produto indisponível: ${produtoIndisponivel}`);
 
 console.log("_______________________________");
 
@@ -255,6 +294,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let usuario = {
+    ehAdmin: lerTeclado.keyInYN("É administrador? "),
+    logado: lerTeclado.keyInYN("Está logado? "),
+    contaAtiva: lerTeclado.keyInYN("Conta ativa? ")
+};
+
+let acessoSistema = usuario.logado && usuario.contaAtiva;
+let acessoAdmin = acessoSistema && usuario.ehAdmin;
+let acessoNegado = !usuario.logado || !usuario.contaAtiva;
+
+console.log(`Acesso ao sistema: ${acessoSistema}`);
+console.log(`Acesso de administrador: ${acessoAdmin}`);
+console.log(`Acesso negado: ${acessoNegado}`);
 
 console.log("_______________________________");
 
@@ -278,5 +330,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let credenciaisSistema = {
+    usuario: "admin",
+    senha: "1234"
+};
 
+let usuarioDigitado = lerTeclado.question("Usuário: ");
+let senhaDigitada = lerTeclado.question("Senha: ");
+
+let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario;
+let senhaCorreta = senhaDigitada === credenciaisSistema.senha;
+let loginValido = usuarioCorreto && senhaCorreta;
+
+let mensagem =
+    loginValido
+    ? "Login realizado com sucesso!"
+    : "Usuário ou senha incorretos.";
+
+console.log(mensagem);
 console.log("_______________________________");
