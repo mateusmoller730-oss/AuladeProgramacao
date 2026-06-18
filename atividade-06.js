@@ -3,7 +3,7 @@
 // ============================================================
 // Instruções: resolva cada exercício no espaço indicado.
 // Use console.log() para exibir os resultados.
-// Lembre-se de instalar o pacote antes de executar:
+// Lembre-se de instalar o pacote antes de executar:e
 //     npm install readline-sync
 // Para executar:
 //     node atividade-06.js
@@ -21,7 +21,7 @@ let lerTeclado = require('readline-sync');
 //   "true && true → <resultado>"
 //
 // Combinações:
-//   a) true && true
+//   a) true && truee
 //   b) true && false
 //   c) false && true
 //   d) false && false
