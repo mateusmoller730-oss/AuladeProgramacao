@@ -9,9 +9,9 @@
 //     node atividade-04.js
 //
 // Dica: Ao terminar um exercício, comente-o. Assim os dados
-//       não serão solicitados novamente.
+//       não serão solicitados novament.
 // ============================================================
-
+//
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Operações básicas
@@ -147,7 +147,7 @@
 // console.log(`nivel 03: ${nivel}`)
 
 // ------------------------------------------------------------
-// EXERCÍCIO 6 – Funções matemáticas (Math)
+// EXERCÍCIO 6 – Funções matematicas (Math)
 // ------------------------------------------------------------
 // a) Declare "nota" com o valor 7.3.
 // b) Exiba o resultado de Math.round(nota), Math.floor(nota) e Math.ceil(nota).
