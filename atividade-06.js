@@ -173,7 +173,7 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let velocidade = 110
+// let velocidade = 90
 // let limiteVelocidade = 100
 // let statusMulta = (velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade regular")
 
@@ -192,6 +192,12 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
+<<<<<<< HEAD
+// let ehEstudante = lerTeclado.keyInYN("Você é bolsista?");
+// let pagaMais = lerTeclado.keyInYN("Estudante paga mais que R$ 1000,00 mensais pelo curso?");
+// let mensagem =(ehEstudante && pagaMais)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
+// console.log(`Situação do aluno: Bolsista? ${ehEstudante}, Paga mais que R$ 1000,00? ${pagaMais}. ${mensagem}`);
+=======
 let ehEstudante = lerTeclado.keyInYN("Você é bolsista? ");
 let pagaMais = lerTeclado.keyInYN("Paga mais que R$ 1000,00 por mês? ");
 
@@ -200,6 +206,7 @@ let mensagem = (ehEstudante && pagaMais)
     : "Desconto não aplicado.";
 
 console.log(`${mensagem}`);
+>>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Verificação de acesso com input
@@ -219,6 +226,34 @@ console.log(`${mensagem}`);
 
 // → Seu código aqui:
 
+<<<<<<< HEAD
+// let idade = lerTeclado.questionInt("Digite sua idade:")
+// let possuiIngresso = lerTeclado.keyInYN("Possui ingresso? ");
+// let ehAssociado = lerTeclado.keyInYN("E associado? ");
+
+// let usuario = {
+//     idade: idade,
+//     possuiIngresso: possuiIngresso,
+//     ehAssociado: ehAssociado
+
+
+    if (idade >= 18 && possuiIngresso){
+        console.log("entrada normal liberada")
+    }
+
+    else if (idade >= 18 && ehAssociado){
+        console.log("associado liberado")
+    } 
+
+    else if (idade < 18 && (possuiIngresso || ehAssociado)){
+        console.log("entrada negada, precisa de um acompanhante")
+    }
+
+    else {
+        console.log("entrada negada, compre um ingresso ou se associej")
+    }
+
+=======
 let pessoa = {
     idade: lerTeclado.questionInt("Digite sua idade: "),
     possuiIngresso: lerTeclado.keyInYN("Possui ingresso? "),
@@ -240,6 +275,7 @@ let mensagemFinal =
     : "Entrada negada.";
 
 console.log(mensagemFinal);
+>>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
 
 console.log("_______________________________");
 
