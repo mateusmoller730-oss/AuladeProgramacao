@@ -468,7 +468,46 @@ console.log("_______________________________");
 //    - 4 → exiba: "Obrigado por visitar a TechShop!"
 //    - default → exiba: "Opção inválida."
 
+
 // → Seu código aqui:
 
+const readline = require("readline-sync");
+
+let loja = {
+    nome: "TechShop",
+    saldo: 0
+};
+
+let opcao = readline.questionInt(
+    "1-Ver produtos\n2-Comprar\n3-Ver carrinho\n4-Sair\nOpcao: "
+);
+
+switch (opcao) {
+    case 1:
+        console.table([
+            { produto: "Mouse", preco: 89.90 },
+            { produto: "Teclado", preco: 149.90 },
+            { produto: "Headset", preco: 199.90 }
+        ]);
+        break;
+
+    case 2:
+        readline.question("Qual produto? ");
+        let preco = readline.questionFloat("Preco: ");
+        loja.saldo += preco;
+        console.log("Produto adicionado ao carrinho.");
+        break;
+
+    case 3:
+        console.log("Total no carrinho: R$ " + loja.saldo);
+        break;
+
+    case 4:
+        console.log("Obrigado por visitar a TechShop!");
+        break;
+
+    default:
+        console.log("Opcao invalida.");
+}
 
 
