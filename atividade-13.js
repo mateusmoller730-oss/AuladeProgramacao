@@ -62,22 +62,6 @@ console.log("_______________________________");
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  //  const m = [
-  //    [12,  7, 25],
-  //    [ 3, 18,  9],
-  //    [31, 14, 22],
-  //  ];
-=======
-   const m = [
-     [12,  7, 25, 4],
-     [ 3, 18,  9, 5],
-     [31, 14, 22, 99],
-   ];
->>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
->>>>>>> 0d1222440fdaf6e0ce2333891cd67867a904564b
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 
@@ -87,36 +71,24 @@ const m = [
   [31, 14, 22, 99],
 ];
 
-// let maior = m[0][0];
-// let menor = m[0][0];
+let maior = m[0][0];
+let menor = m[0][0];
 
-// let linhaMaior = 0;
-// let colunaMaior = 0;
+let linhaMaior = 0;
+let colunaMaior = 0;
 
-// let linhaMenor = 0;
-// let colunaMenor = 0;
+let linhaMenor = 0;
+let colunaMenor = 0;
 
-<<<<<<< HEAD
 for (let i = 0; i < m.length; i++) {
   for (let j = 0; j < m[i].length; j++) {
-=======
-<<<<<<< HEAD
-// for (let i = 0; i < m.length; i++) {
-//   for (let j = 0; j < m[i].length; j++) {
-=======
-for (let i = 0; i < m.length; i++) {       //linha
-  for (let j = 0; j < m[i].length; j++) {         //coluna
-    
->>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
->>>>>>> 0d1222440fdaf6e0ce2333891cd67867a904564b
 
-//     if (m[i][j] > maior) {
-//       maior = m[i][j];
-//       linhaMaior = i;
-//       colunaMaior = j;
-//     }
+    if (m[i][j] > maior) {
+      maior = m[i][j];
+      linhaMaior = i;
+      colunaMaior = j;
+    }
 
-<<<<<<< HEAD
     if (m[i][j] < menor) {
       menor = m[i][j];
       linhaMenor = i;
@@ -124,22 +96,12 @@ for (let i = 0; i < m.length; i++) {       //linha
     }
   }
 }
-=======
-//     if (m[i][j] < menor) {
-//       menor = m[i][j];
-//       linhaMenor = i;
-//       colunaMenor = j;
-//     }
 
-//   }
-// }
->>>>>>> 0d1222440fdaf6e0ce2333891cd67867a904564b
+console.log("Maior:", maior);
+console.log("Posição do maior:", linhaMaior, colunaMaior);
 
-// console.log("Maior:", maior);
-// console.log("Posição do maior:", linhaMaior, colunaMaior);
-
-// console.log("Menor:", menor);
-// console.log("Posição do menor:", linhaMenor, colunaMenor);
+console.log("Menor:", menor);
+console.log("Posição do menor:", linhaMenor, colunaMenor);
 
 console.log("_______________________________");
 
