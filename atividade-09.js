@@ -329,5 +329,39 @@ console.table(turma);
 
 // → Seu código aqui:
 
+const readline = require("readline-sync");
+
+let estoque = [];
+
+let qtd = readline.questionInt("Quantos produtos deseja cadastrar? ");
+
+for (let i = 0; i < qtd; i++) {
+    let nome = readline.question("Nome: ");
+    let preco = readline.questionFloat("Preco: ");
+
+    estoque.push({ nome, preco });
+}
+
+for (let i = 0; i < estoque.length; i++) {
+    console.log(estoque[i].nome + ": R$ " + estoque[i].preco);
+}
+
+let maisCaro = estoque[0];
+let maisBarato = estoque[0];
+
+for (let i = 0; i < estoque.length; i++) {
+    if (estoque[i].preco > maisCaro.preco) {
+        maisCaro = estoque[i];
+    }
+
+    if (estoque[i].preco < maisBarato.preco) {
+        maisBarato = estoque[i];
+    }
+}
+
+console.log("Mais caro: " + maisCaro.nome + " - R$ " + maisCaro.preco);
+console.log("Mais barato: " + maisBarato.nome + " - R$ " + maisBarato.preco);
+
+console.table(estoque);
 
 console.log("_______________________________");

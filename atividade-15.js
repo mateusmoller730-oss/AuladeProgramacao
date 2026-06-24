@@ -1,0 +1,304 @@
+// ============================================================
+// ATIVIDADE 15 –  Funções com Parâmetros e Retornos
+// ============================================================
+//
+// IMPORTANTE: a partir de agora, as funções devem RECEBER
+// PARÂMETROS e RETORNAR valores sempre que fizer sentido.
+// Evite ficar misturando console.log() dentro de funções.
+//
+// ============================================================
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 1 – Função com 1 parâmetro
+// ------------------------------------------------------------
+// a) Crie a função 'quadrado(n)' que retorna n elevado ao quadrado.
+// b) Teste com 3, 7 e 10. Exiba cada resultado.
+
+// → Seu código aqui:
+
+// function quadrado(n) {
+//     return n * n
+// }
+
+// console.log("Quadrado de 3 = " + quadrado(3));
+// console.log("Quadrado de 7 = " + quadrado(7));
+// console.log("Quadrado de 10 = " + quadrado(10));
+
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 2 – Função com 2 parâmetros
+// ------------------------------------------------------------
+// a) Crie a função 'somar(a, b)' que retorna a soma de 2 numeros quaisquer (numeros passados ao chamar a função).
+// b) Crie 'subtrair(a, b)', 'multiplicar(a, b)' e 'dividir(a, b)'.
+//    Em dividir, retorne a string "Erro: divisão por zero" se b === 0.
+// c) Teste cada uma com diversos valores e exiba os resultados.
+
+// → Seu código aqui:
+
+
+// function somar(a, b) {
+//     return a + b
+    
+// }
+
+// function subtrair(a, b) {
+//     return a - b
+
+// }
+
+// function multiplicar(a, b) {
+//     return a * b
+    
+// }
+
+// function dividir(a, b) {
+//     if(b===0){
+//         return "Erro: divisão por zero"
+//     }
+//         return a / b;
+// }
+
+// console.log(somar(3, 4))
+// console.log(subtrair(5, 23))
+// console.log(multiplicar(87, 67))
+// console.log(dividir(4, 0))
+
+
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 3 – Funções booleanas
+// ------------------------------------------------------------
+// a) Crie 'ehPar(n)' que retorna true se n for par, senão false.
+// b) Crie 'ehMaiorDeIdade(idade)' que retorna true se idade >= 18.
+// c) Crie 'ehVogal(letra)' que retorna true se letra for vogal
+//    (considere maiúsculas e minúsculas).
+// d) Teste cada função e exiba os resultados.
+
+// → Seu código aqui:
+
+
+
+
+// function ehPar(n) {
+//     return !(n % 2 === 0)
+    
+// }
+
+// function ehMaiorDeIdade(idade) {
+//     if(idade>= 18)
+//     return true 
+
+
+// }
+
+// function ehVogal(letra) {
+//     letra = letra.toLowerCase()
+
+//      return letra === "a" ||
+//         letra === "e" ||
+//         letra === "i" ||
+//         letra === "o" ||
+//         letra === "u";
+// }
+
+
+// console.log(ehPar("3"))
+// console.log(ehMaiorDeIdade("18"));
+// console.log(ehVogal("a"))
+
+// ------------------------------------------------------------
+// EXERCÍCIO 4 – Múltiplos returns (early return)
+// ------------------------------------------------------------
+// a) Crie a função 'classificarIMC(imc)' que retorna:
+//    - "Abaixo do peso"   se imc < 18.5
+//    - "Peso normal"      se imc < 25
+//    - "Sobrepeso"        se imc < 30
+//    - "Obesidade"        caso contrário
+// b) Crie 'calcularIMC(peso, altura)' que retorna peso / (altura * altura).
+// c) Pergunte peso e altura ao usuário.
+// d) Combine as duas funções e exiba:
+//    "IMC: <valor> – <classificação>"
+
+// → Seu código aqui:
+// let lerTeclado = require("readline-sync");
+
+// let peso =lerTeclado.question("Digite seu peso (kg):");
+// let altura =lerTeclado.question("Digite sua altura (m):");
+
+
+// function calcularIMC(peso, altura) {
+//     let imc =  peso / (altura ** 2);
+//     return imc 
+// }
+// function classificarIMC(imc){
+//     if (imc < 18.5) {
+//         return "Abaixo do peso";
+//     } else if (imc < 25) {
+//         return "Peso normal";
+//     } else if (imc < 30) {
+//         return "Sobrepeso";
+//     } else {
+//         return "Obesidade";
+//     }
+// }
+
+
+
+
+
+// console.log(`IMC: ${imc.toFixed(2)} – ${classificacao}`);
+
+
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 5 – Parâmetros padrão (default)
+// ------------------------------------------------------------
+// a) Crie a função 'precoComDesconto(valor, desconto = 10)' que retorna
+//    o valor após aplicar o desconto em PORCENTAGEM.
+// b) Teste:
+//    - precoComDesconto(100)     → retorno esperado: 90
+//    - precoComDesconto(100, 25  → retorno esperado: 75
+//    - precoComDesconto(250, 5)  → retorno esperado: 237.5
+// c) Exiba cada resultado formatado com toFixed(2).
+
+// → Seu código aqui:
+
+// function precoComDesconto(valor, desconto = 10) {
+// return valor * (1 - desconto / 100)
+ 
+// }
+
+// console.log(precoComDesconto(100))
+// console.log(precoComDesconto(250, 5))
+// console.log(precoComDesconto(100, 25))
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 6 – Funções que recebem vetores
+// ------------------------------------------------------------
+// a) Crie a função 'somarVetor(vet)' que retorna a soma dos elementos de um vetor.
+// b) Crie 'mediaVetor(vet)' que retorna a média (REAPROVEITE somarVetor).
+// c) Crie 'maiorDoVetor(vet)' que retorna o maior valor de um vetor.
+// d) Crie 'menorDoVetor(vet)' que retorna o menor valor de um vetor.
+// e) Teste com:
+      numeros = [12, 7, 25, 3, 18, 9, 31, 14];
+
+// → Seu código aqui:
+
+
+// function somarVetor(vet){
+//     let soma = 0
+//     for ( const numero of numeros ){
+//     soma += numero
+// }
+
+//     return soma
+// }
+
+// function mediaVetor(vet){
+//     return somarVetor(vet) / numeros.length
+// }
+
+// function maiordoVetor(vet){
+//     return Math.max(vet);
+
+// }
+
+
+
+// console.log("Soma:", somarVetor(numeros));
+// console.log("Média:", mediaVetor(numeros));
+// console.log("Maior:", mediaVetor(numeros));
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 7 – Função que retorna objeto
+// ------------------------------------------------------------
+// a) Crie a função 'criarAluno(nome, idade, nota)' que retorna um objeto:
+//    { nome, idade, nota, situacao }
+//    onde 'situacao' é "Aprovado" se nota >= 7, senão "Reprovado".
+// b) A verificação de aprovação deve ser feita por uma função específica para isso.
+// c) Crie 3 alunos chamando a função e exiba-os com console.table([a1, a2, a3]).
+
+// → Seu código aqui:
+
+function verificarSituacao(nota) {
+  return nota >= 7 ? "Aprovado" : "Reprovado";
+}
+
+function criarAluno(nome, idade, nota) {
+  return {
+    nome,
+    idade,
+    nota,
+    situacao: verificarSituacao(nota)
+  };
+}
+
+
+let a1 = criarAluno("Mateus", 20, 8);
+let a2 = criarAluno("Bruno", 22, 5);
+let a3 = criarAluno("Pedro", 19, 7);
+
+
+console.table([a1, a2, a3]);
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 8 – Função que retorna vetor
+// ------------------------------------------------------------
+// a) Crie a função 'gerarPares(inicio, fim)' que retorna um vetor
+//    com todos os números PARES entre 'inicio' e 'fim' (inclusive).
+// b) Teste com gerarPares(1, 20) e exiba o vetor.
+// c) Crie 'filtrarMaioresQue(vet, limite)' que retorna um novo vetor
+//    apenas com os elementos maiores que 'limite'.
+// d) Combine: gere pares de 1 a 50 e filtre os maiores que 30.
+
+// → Seu código aqui:
+
+function gerarPares(inicio, fim) {
+    let pares = [];
+  
+    for (let i = inicio; i <= fim; i++) {
+      if (i % 2 === 0) {
+        pares.push(i);
+      }
+    }
+  
+    return pares;
+  }
+  
+  function filtrarMaioresQue(vet, limite) {
+    let filtrado = [];
+  
+    for (const valor of vet) {
+      if (valor > limite) {
+        filtrado.push(valor);
+      }
+    }
+  
+    return filtrado;
+  }
+  
+  let pares50 = gerarPares(1, 50);
+  let maioresQue30 = filtrarMaioresQue(pares50, 30);
+  
+  console.log("Pares:", pares50);
+  console.log("Maiores que 30:", maioresQue30);
+
+
+
+console.log("_______________________________");

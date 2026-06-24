@@ -18,7 +18,7 @@ let lerTeclado = require('readline-sync');
 // ------------------------------------------------------------
 // a) Declare "pontos" com valor 120.
 // b) Se "pontos" for maior que 100, exiba: "Nível alcançado!".
-//    Mas se "pontos" for maior que 200, exiba somente: "Nível máximo alcançado!"
+//    Mas se "pontos" for maior que 200, exiba somente: "Nível máximo alcançado!"""
 
 // → Seu código aqui:
 
@@ -188,10 +188,17 @@ let lerTeclado = require('readline-sync');
 //
 // → Seu código aqui:
 
-// let motorista = {
-//    nome: lerTeclado.question("Qual seu nome? "),
-//    Idade: lerTeclado.questionInt("Qual sua idade? "),
-//    habilitacao: lerTeclado.keyIn("Tem habilitacao? ")
+let motorista = {
+    nome: lerTeclado.question("Qual seu nome? "),
+    idade: lerTeclado.questionInt("Qual sua idade? "),
+    habilitacao: lerTeclado.keyInYN("Tem habilitação? ")
+};
+
+if (motorista.idade >= 21 && motorista.habilitacao) {
+    console.log(`${motorista.nome}, você pode alugar o veículo.`);
+} else {
+    console.log(`${motorista.nome}, você não atende aos requisitos.`);
+}
 // }
 // console.log("_______________________________");
 
@@ -207,7 +214,14 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
+let ehEstudante = lerTeclado.keyInYN("Você é estudante? ");
+let ehIdoso = lerTeclado.keyInYN("Você tem 60 anos ou mais? ");
 
+if (ehEstudante || ehIdoso) {
+    console.log("Desconto de 50% aplicado!");
+} else {
+    console.log("Sem desconto. Preço cheio.");
+}
 console.log("_______________________________");
 
 
@@ -215,7 +229,7 @@ console.log("_______________________________");
 // EXERCÍCIO 9 – Sistema de notas completo
 // ------------------------------------------------------------
 // a) Pergunte ao usuário:
-//    - Nome do aluno.
+//    - Nome do aluno..
 //    - Nota da prova 1.
 //    - Nota da prova 2.
 // b) Armazene os dados em um objeto "aluno" e calcule a média
@@ -229,7 +243,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let aluno = {
+    nome: lerTeclado.question("Nome do aluno: "),
+    prova1: lerTeclado.questionFloat("Nota da prova 1: "),
+    prova2: lerTeclado.questionFloat("Nota da prova 2: ")
+};
 
+aluno.media = (aluno.prova1 + aluno.prova2) / 2;
+
+let situacao;
+
+if (aluno.media >= 7) {
+    situacao = "Aprovado";
+} else if (aluno.media >= 5) {
+    situacao = "Em recuperação";
+} else {
+    situacao = "Reprovado";
+}
+
+console.table(aluno);
+console.log(`${aluno.nome}: ${situacao} (média: ${aluno.media.toFixed(2)})`);
 console.log("_______________________________");
 
 
@@ -252,5 +285,44 @@ console.log("_______________________________");
 // g) Chame o professor para realizar alguns testes 🫡
 
 // → Seu código aqui:
+let calculo = {
+    numeroA: lerTeclado.questionFloat("Digite o primeiro número: "),
+    numeroB: lerTeclado.questionFloat("Digite o segundo número: "),
+    operacao: lerTeclado.questionInt(
+        "Escolha a operação (1-Soma | 2-Subtração | 3-Multiplicação | 4-Divisão): "
+    ),
+    simbolo: ""
+};
 
+let resultado;
+
+if (calculo.operacao === 1) {
+    calculo.simbolo = "+";
+    resultado = calculo.numeroA + calculo.numeroB;
+} else if (calculo.operacao === 2) {
+    calculo.simbolo = "-";
+    resultado = calculo.numeroA - calculo.numeroB;
+} else if (calculo.operacao === 3) {
+    calculo.simbolo = "*";
+    resultado = calculo.numeroA * calculo.numeroB;
+} else if (calculo.operacao === 4) {
+    calculo.simbolo = "/";
+
+    if (calculo.numeroB === 0) {
+        console.log("Erro: divisão por zero não é permitida.");
+    } else {
+        resultado = calculo.numeroA / calculo.numeroB;
+        console.log(
+            `${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`
+        );
+    }
+} else {
+    console.log("Operação inválida.");
+}
+
+if (resultado !== undefined && calculo.numeroB !== 0) {
+    console.log(
+        `${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`
+    );
+}
 console.log("_______________________________");

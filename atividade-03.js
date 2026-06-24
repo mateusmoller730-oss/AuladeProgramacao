@@ -291,10 +291,28 @@ let lerTeclado = require('readline-sync');
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui:
-// let nome = lerTeclado.question("Nome:")
-// let categoria = lerTeclado.question("Categoria:")
-// let preco = lerTeclado.questionInt("Preco:")
-// let quantidadeestoque = lerteclado.question("estoquenode C:\Users\mateus_moller\AuladeProgramacao\atividade-03.js")
+// const teclado = require("readline-sync");
+
+
+// let nome = teclado.question("Nome do produto: ");
+// let categoria = teclado.question("Categoria: ");
+// let preco = teclado.questionFloat("Preco: ");
+// let quantidade = teclado.questionInt("Quantidade em estoque: ");
+// let disponivel = teclado.keyInYN("Esta disponivel para venda? ");
+
+
+// let produto = {
+//     nome: nome,
+//     categoria: categoria,
+//     preco: preco,
+//     quantidade: quantidade,
+//     disponivel: disponivel
+// };
+
+// console.table(produto);
+// console.log(
+//     `Produto: ${produto.nome} | Categoria: ${produto.categoria} | Estoque: ${produto.quantidade} un`
+//);
 
 //console.log("_______________________________");
 
@@ -313,14 +331,14 @@ let lerTeclado = require('readline-sync');
 
 // let medicamento1 = {
 //   nome: lerTeclado.question("Nome do medicamento 1: "),
-//   preco: lerTeclado.question("Preço do medicamento 1: "),
-//   emEstoque: lerTeclado.keyInYN("Está em estoque? (sim/não): ")
+//   preco: lerTeclado.question("Preco do medicamento 1: "),
+//   emEstoque: lerTeclado.keyInYN("Esta em estoque? (sim/nao): ")
 // }
 
 // let medicamento2 = {
 //   nome: lerTeclado.question("Nome do medicamento 2: "),
-//   preco: lerTeclado.question("Preço do medicamento 2: "),
-//   emEstoque: lerTeclado.keyInYN("Está em estoque? (sim/não): ")
+//   preco: lerTeclado.question("Preco do medicamento 2: "),
+//   emEstoque: lerTeclado.keyInYN("Esta em estoque? (sim/nao): ")
 // };
 // let estoqueFarmacia = [];
 // estoqueFarmacia.push(medicamento1);
@@ -333,7 +351,7 @@ let lerTeclado = require('readline-sync');
 
 // console.log("Medicamento 2:");
 // console.log("Nome:", estoqueFarmacia[1].nome);
-// console.log("Preço:", estoqueFarmacia[1].preco);
+// console.log("Preco:", estoqueFarmacia[1].preco);
 
 
 // console.log("Medicamento 1:");
