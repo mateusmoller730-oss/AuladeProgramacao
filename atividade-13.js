@@ -1,3 +1,4 @@
+
 // ============================================================
 //   ATIVIDADE 13 – Estruturas de Dados: Matriz
 // ============================================================
@@ -5,60 +6,70 @@
 
 let lerTeclado = require('readline-sync');
 
+console.log("_______________________________");
+
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Lendo uma matriz
 // ------------------------------------------------------------
 // a) Declare a matriz:
-    // let matriz = [
-    //   [10, 20, 30],
-    //   [40, 50, 60],
-    //   [70, 80, 90],
-    // ];
 // b) Exiba: número de linhas e número de colunas.
 // c) Exiba o elemento central (m[1][1]).
 // d) Exiba o canto inferior direito (use .length).
 
-// → Seu código aqui:
+let matriz = [
+  [10, 20, 30],
+  [40, 50, 60],
+  [70, 80, 90],
+];
 
-// console.log(`Linhas: ${matriz.length}`);
-// console.log(`Colunas: ${matriz[0].length}`);
-// console.log(`elemento central: ${matriz[1][1]}`)
-// console.log(`ultimo elemento: ${matriz[matriz.length-1][matriz.length-1]}`)
+console.log(`Linhas: ${matriz.length}`);
+console.log(`Colunas: ${matriz[0].length}`);
+console.log(`Elemento central: ${matriz[1][1]}`);
+console.log(`Último elemento: ${matriz[matriz.length - 1][matriz[0].length - 1]}`);
+
+console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Percorrendo com for aninhado
 // ------------------------------------------------------------
 // a) Declare a matriz:
-  
-  //    const m = [
-  //    [1, 2, 3, 4],
-  //    [5, 6, 7, 8],
-  //    [9, 10, 11, 12],
-  //  ];  
-
 // b) Usando dois for aninhados, exiba cada elemento no formato:
 //    "m[i][j] = <valor>"
 // c) Calcule e exiba a SOMA de todos os elementos da matriz.
 
-// → Seu código aqui:
+const m2 = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+];
 
-// for(let i = 0; i < m.length; i++)
-// for(let j = 0; j < m[0].length; j++)
-// console.log(`matriz [${i}][${j}] = ${m[i][j]}`)
+let soma = 0;
+
+for (let i = 0; i < m2.length; i++) {
+  for (let j = 0; j < m2[i].length; j++) {
+    console.log(`m[${i}][${j}] = ${m2[i][j]}`);
+    soma += m2[i][j];
+  }
+}
+
+console.log("Soma total:", soma);
+
+console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-   const m = [
-     [12,  7, 25, 4],
-     [ 3, 18,  9, 5],
-     [31, 14, 22, 99],
-   ];
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 
-// → Seu código aqui:
+const m = [
+  [12, 7, 25, 4],
+  [3, 18, 9, 5],
+  [31, 14, 22, 99],
+];
 
 let maior = m[0][0];
 let menor = m[0][0];
@@ -69,9 +80,8 @@ let colunaMaior = 0;
 let linhaMenor = 0;
 let colunaMenor = 0;
 
-for (let i = 0; i < m.length; i++) {       //linha
-  for (let j = 0; j < m[i].length; j++) {         //coluna
-    
+for (let i = 0; i < m.length; i++) {
+  for (let j = 0; j < m[i].length; j++) {
 
     if (m[i][j] > maior) {
       maior = m[i][j];
@@ -84,7 +94,6 @@ for (let i = 0; i < m.length; i++) {       //linha
       linhaMenor = i;
       colunaMenor = j;
     }
-
   }
 }
 
@@ -93,6 +102,8 @@ console.log("Posição do maior:", linhaMaior, colunaMaior);
 
 console.log("Menor:", menor);
 console.log("Posição do menor:", linhaMenor, colunaMenor);
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -103,43 +114,35 @@ console.log("Posição do menor:", linhaMenor, colunaMenor);
 // c) Exiba a soma de cada COLUNA: "Coluna <j>: <soma>"
 // d) Exiba a soma da DIAGONAL principal (m[i][i]).
 
-// → Seu código aqui:
+for (let i = 0; i < m.length; i++) {
+  let somaLinha = 0;
 
-// const m = [
-//   [12, 7, 25],
-//   [3, 18, 9],
-//   [31, 14, 22],
-// ];
+  for (let j = 0; j < m[i].length; j++) {
+    somaLinha += m[i][j];
+  }
 
+  console.log("Linha " + i + ": " + somaLinha);
+}
 
-// for (let i = 0; i < m.length; i++) {
-//   let somaLinha = 0;
+for (let j = 0; j < m[0].length; j++) {
+  let somaColuna = 0;
 
-//   for (let j = 0; j < m[i].length; j++) {
-//     somaLinha += m[i][j];
-//   }
+  for (let i = 0; i < m.length; i++) {
+    somaColuna += m[i][j];
+  }
 
-//   console.log("Linha " + i + ": " + somaLinha);
-// }
+  console.log("Coluna " + j + ": " + somaColuna);
+}
 
-// for (let j = 0; j < m[0].length; j++) {
-//   let somaColuna = 0;
+let diagonal = 0;
 
-//   for (let i = 0; i < m.length; i++) {
-//     somaColuna += m[i][j];
-//   }
+for (let i = 0; i < m.length; i++) {
+  diagonal += m[i][i];
+}
 
-//   console.log("Coluna " + j + ": " + somaColuna);
-// }
+console.log("Diagonal principal:", diagonal);
 
-// let diagonal = 0;
-
-// for (let i = 0; i < m.length; i++) {
-//   diagonal += m[i][i];
-// }
-
-// console.log("Diagonal principal:", diagonal);
-
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -150,21 +153,19 @@ console.log("Posição do menor:", linhaMenor, colunaMenor);
 //    "Digite m[<i>][<j>]: "
 // c) Exiba a matriz final com console.table().
 
-// → Seu código aqui:
+let matrizUser = [];
 
-// let matriz = []
-// let qlinhas = lerTeclado.question("Quantas linhas tem a matriz? ")
-// let qcolunas = lerTeclado.question("Quantas colunas tem a matriz? ")
+let qlinhas = lerTeclado.questionInt("Quantas linhas tem a matriz? ");
+let qcolunas = lerTeclado.questionInt("Quantas colunas tem a matriz? ");
 
-// for(let i = 0; i <  qlinhas; i++){
-// matriz [i] = []
+for (let i = 0; i < qlinhas; i++) {
+  matrizUser[i] = [];
 
-// for(let j = 0; j < qcolunas; j++)
-  
-//     matriz [i] [j] = Number(
-//        lerTeclado.question(`Digite o valor para [${i}][${j}]:`)
-//     )
-//   }
+  for (let j = 0; j < qcolunas; j++) {
+    matrizUser[i][j] = lerTeclado.questionInt(`Digite o valor para [${i}][${j}]: `);
+  }
+}
 
-// console.table(matriz)
+console.table(matrizUser);
 
+console.log("_______________________________");
