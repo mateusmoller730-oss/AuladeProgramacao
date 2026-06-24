@@ -48,48 +48,48 @@
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-   const m = [
-     [12,  7, 25],
-     [ 3, 18,  9],
-     [31, 14, 22],
-   ];
+  //  const m = [
+  //    [12,  7, 25],
+  //    [ 3, 18,  9],
+  //    [31, 14, 22],
+  //  ];
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 
 // → Seu código aqui:
 
-let maior = m[0][0];
-let menor = m[0][0];
+// let maior = m[0][0];
+// let menor = m[0][0];
 
-let linhaMaior = 0;
-let colunaMaior = 0;
+// let linhaMaior = 0;
+// let colunaMaior = 0;
 
-let linhaMenor = 0;
-let colunaMenor = 0;
+// let linhaMenor = 0;
+// let colunaMenor = 0;
 
-for (let i = 0; i < m.length; i++) {
-  for (let j = 0; j < m[i].length; j++) {
+// for (let i = 0; i < m.length; i++) {
+//   for (let j = 0; j < m[i].length; j++) {
 
-    if (m[i][j] > maior) {
-      maior = m[i][j];
-      linhaMaior = i;
-      colunaMaior = j;
-    }
+//     if (m[i][j] > maior) {
+//       maior = m[i][j];
+//       linhaMaior = i;
+//       colunaMaior = j;
+//     }
 
-    if (m[i][j] < menor) {
-      menor = m[i][j];
-      linhaMenor = i;
-      colunaMenor = j;
-    }
+//     if (m[i][j] < menor) {
+//       menor = m[i][j];
+//       linhaMenor = i;
+//       colunaMenor = j;
+//     }
 
-  }
-}
+//   }
+// }
 
-console.log("Maior:", maior);
-console.log("Posição do maior:", linhaMaior, colunaMaior);
+// console.log("Maior:", maior);
+// console.log("Posição do maior:", linhaMaior, colunaMaior);
 
-console.log("Menor:", menor);
-console.log("Posição do menor:", linhaMenor, colunaMenor);
+// console.log("Menor:", menor);
+// console.log("Posição do menor:", linhaMenor, colunaMenor);
 
 
 // ------------------------------------------------------------

@@ -173,7 +173,7 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let velocidade = 110
+// let velocidade = 90
 // let limiteVelocidade = 100
 // let statusMulta = (velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade regular")
 
@@ -194,7 +194,7 @@ let lerTeclado = require('readline-sync');
 
 // let ehEstudante = lerTeclado.keyInYN("Você é bolsista?");
 // let pagaMais = lerTeclado.keyInYN("Estudante paga mais que R$ 1000,00 mensais pelo curso?");
-// let mensagem =(ehEstudante && pagaMaisDe1000)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
+// let mensagem =(ehEstudante && pagaMais)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
 // console.log(`Situação do aluno: Bolsista? ${ehEstudante}, Paga mais que R$ 1000,00? ${pagaMais}. ${mensagem}`);
 
 // ------------------------------------------------------------
@@ -214,6 +214,32 @@ let lerTeclado = require('readline-sync');
 //    Caso contrário → "Entrada negada."
 
 // → Seu código aqui:
+
+// let idade = lerTeclado.questionInt("Digite sua idade:")
+// let possuiIngresso = lerTeclado.keyInYN("Possui ingresso? ");
+// let ehAssociado = lerTeclado.keyInYN("E associado? ");
+
+// let usuario = {
+//     idade: idade,
+//     possuiIngresso: possuiIngresso,
+//     ehAssociado: ehAssociado
+
+
+    if (idade >= 18 && possuiIngresso){
+        console.log("entrada normal liberada")
+    }
+
+    else if (idade >= 18 && ehAssociado){
+        console.log("associado liberado")
+    } 
+
+    else if (idade < 18 && (possuiIngresso || ehAssociado)){
+        console.log("entrada negada, precisa de um acompanhante")
+    }
+
+    else {
+        console.log("entrada negada, compre um ingresso ou se associej")
+    }
 
 
 console.log("_______________________________");
