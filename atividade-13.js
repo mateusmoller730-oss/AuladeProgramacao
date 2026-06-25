@@ -50,19 +50,11 @@ let lerTeclado = require('readline-sync');
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-<<<<<<< HEAD
   //  const m = [
   //    [12,  7, 25],
   //    [ 3, 18,  9],
   //    [31, 14, 22],
   //  ];
-=======
-   const m = [
-     [12,  7, 25, 4],
-     [ 3, 18,  9, 5],
-     [31, 14, 22, 99],
-   ];
->>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 
@@ -77,14 +69,11 @@ let lerTeclado = require('readline-sync');
 // let linhaMenor = 0;
 // let colunaMenor = 0;
 
-<<<<<<< HEAD
 // for (let i = 0; i < m.length; i++) {
 //   for (let j = 0; j < m[i].length; j++) {
-=======
 for (let i = 0; i < m.length; i++) {       //linha
   for (let j = 0; j < m[i].length; j++) {         //coluna
     
->>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
 
 //     if (m[i][j] > maior) {
 //       maior = m[i][j];
