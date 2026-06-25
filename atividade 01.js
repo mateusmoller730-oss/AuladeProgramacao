@@ -1,5 +1,6 @@
 // ============================================================
-//   ATIVIDADE 01 – Variáveis e Tipos Primitivos em JavaScript
+//   ATIVIDADE 01 – 
+
 // ============================================================
 // Instruções: resolva cada exercício no espaço indicado.
 // Use console.log() para exibir os resultados.
@@ -16,16 +17,19 @@
 // e) Exiba as quatro variáveis no console.
 
 // → Seu código aqui:
-// //a
-// var meuNome = 'mateus'     
-// //b
-// let naousarVar = 'Não se deve usar var em JavaScript porque ele tem escopo de função e sofre hoisting, o que pode causar comportamentos inesperados e bugs no código.'
-// //c
-// let minhaIdade = 16
-// //d
-// const  ANO_NASCIMENTO = 2009
-// //e
-// console.log (`Meu nome e: ${meuNome}\nporque nao usar var? ${naousarVar}\nminha idade? ${minhaIdade}\nano que nasceu?${ANO_NASCIMENTO}`)
+
+var meuNome = 'mateus'
+
+var naoUsarVar = 'Não é recomendado usar var porque ele tem escopo de função, sofre hoisting e pode causar comportamentos inesperados no código.'
+
+let minhaIdade = 16
+
+const ANO_NASCIMENTO = 2009
+
+console.log(`Meu nome é: ${meuNome}
+Porque não usar var? ${naoUsarVar}
+Minha idade: ${minhaIdade}
+Ano de nascimento: ${ANO_NASCIMENTO}`)
 
 console.log("_______________________________");
 
@@ -41,15 +45,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// //a
-// let cidade = 'Jaragua do sul'
-// //b
-// let pais = 'Brasil'
-// //c
-// let fraseMoradia = `minha cidade é? ${cidade}\nmeu pais é? ${pais}`
-// //d
-// console.log(fraseMoradia)
-// console.log(typeof fraseMoradia);
+let cidade = 'Jaraguá do Sul'
+let pais = 'Brasil'
+
+let fraseMoradia = `Eu moro em ${cidade}, no ${pais}.`
+
+console.log(fraseMoradia)
+console.log(typeof fraseMoradia)
 
 console.log("_______________________________");
 
@@ -62,14 +64,15 @@ console.log("_______________________________");
 // c) Exiba as duas variáveis e seus tipos (typeof).
 
 // → Seu código aqui:
-// //a
-// let maiorDeIdade = 'false'
-// //b
-// let temCNH = 'true'
-// //c
-// console.log(typeof maiorDeIdade)
-// console.log(typeof temCNH
 
+let maiorDeIdade = false // (16 anos)
+let temCNH = false
+
+console.log(maiorDeIdade)
+console.log(typeof maiorDeIdade)
+
+console.log(temCNH)
+console.log(typeof temCNH)
 
 console.log("_______________________________");
 
@@ -83,15 +86,18 @@ console.log("_______________________________");
 // d) Explique (em um comentário) por que typeof null retorna "object"...
 
 // → Seu código aqui:
-// //a
-// let apelido = null
-// //b
-// let enderecoAtual = null
-// //c
-// console.log(typeof apelido)
-// console.log(typeof enderecoAtual)
-// //d
-// console.log ('retorna object por causa de um bug histórico do JavaScript que foi mantido para não quebrar códigos antigos')
+
+let apelido
+
+let enderecoAtual = null
+
+console.log(apelido)
+console.log(typeof apelido)
+
+console.log(enderecoAtual)
+console.log(typeof enderecoAtual)
+
+// d) retorna "object" por um bug histórico do JavaScript que foi mantido por compatibilidade
 
 console.log("_______________________________");
 
@@ -109,18 +115,15 @@ console.log("_______________________________");
 // null
 // 3.14
 
-// //a
-// console.log(typeof 42)
-// //b
-// console.log(typeof "texto")
-// //c
-// console.log(typeof true)
-// //d
-// console.log(typeof undefined)
-// //f
-// console.log(typeof null)
-// //g
-// console.log(typeof 3.14)
+// → Seu código aqui:
+
+console.log(typeof 42)
+console.log(typeof "texto")
+console.log(typeof true)
+console.log(typeof undefined)
+console.log(typeof null)
+console.log(typeof 3.14)
+
 console.log("_______________________________");
 
 
@@ -135,90 +138,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let nome = 'mateus'
-// let idade = '16'
-// let altura = '180'
-// let cidae = 'jaragua do sul'
-// let estudandoJS = true
-// let minhavida = `Ola meu nome é ${nome}\n,tenho ${idade}\n anos,moro em ${cidade}\n meco  ${altura}\n e estou ${estudandoJS}`
-// console.log(minhavida);
+let nome = 'Mateus'
+let idade = 16
+let altura = 1.80
+let cidadePessoa = 'Jaraguá do Sul'
+let estudandoJS = true
 
+let minhavida = `Olá! Meu nome é ${nome}, tenho ${idade} anos, moro em ${cidadePessoa},
+meço ${altura}m e estou estudando JavaScript: ${estudandoJS}.`
 
-
-
-
-
-
-// 1
-// //a
-// var meuNome = 'mateus'     
-// //b
-// let naousarVar = 'Não se deve usar var em JavaScript porque ele tem escopo de função e sofre hoisting, o que pode causar comportamentos inesperados e bugs no código.'
-// //c
-// let minhaIdade = 16
-// //d
-// const  ANO_NASCIMENTO = 2009
-// //e
-// console.log (`Meu nome e: ${meuNome}\nporque nao usar var? ${naousarVar}\nminha idade? ${minhaIdade}\nano que nasceu?${ANO_NASCIMENTO}`)
-
-
-
-// 2
-// //a
-// let cidade = 'Jaragua do sul'
-// //b
-// let pais = 'Brasil'
-// //c
-// let fraseMoradia = `minha cidade é? ${cidade}\nmeu pais é? ${pais}`
-// //d
-// console.log(fraseMoradia)
-// console.log(typeof fraseMoradia);
-
-
-// 3
-// //a
-// let maiorDeIdade = 'false'
-// //b
-// let temCNH = 'true'
-// //c
-// console.log(typeof maiorDeIdade)
-// console.log(typeof temCNH)
-
-
-// 4
-// //a
-// let apelido = null
-// //b
-// let enderecoAtual = null
-// //c
-// console.log(typeof apelido)
-// console.log(typeof enderecoAtual)
-// //d
-// console.log ('retorna object por causa de um bug histórico do JavaScript que foi mantido para não quebrar códigos antigos')
-
-
-
-// 5
-// //a
-// console.log(typeof 42)
-// //b
-// console.log(typeof "texto")
-// //c
-// console.log(typeof true)
-// //d
-// console.log(typeof undefined)
-// //f
-// console.log(typeof null)
-// //g
-// console.log(typeof 3.14)
-
-
-
-// 6
-// let nome = 'mateus'
-// let idade = '16'
-// let altura = '180'
-// let cidae = 'jaragua do sul'
-// let estudandoJS = true
-// let minhavida = `Ola meu nome é ${nome}\n,tenho ${idade}\n anos,moro em ${cidade}\n meco  ${altura}\n e estou ${estudandoJS}`
-// console.log(minhavida);
+console.log(minhavida)
