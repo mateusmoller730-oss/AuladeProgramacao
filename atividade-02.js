@@ -18,7 +18,7 @@ let cores = ['azul', 'amarelo', 'vermelho', 'verde']
 console.log(cores [0])
 console.log(cores [3])
 
-
+//
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Métodos básicos
