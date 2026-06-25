@@ -3,7 +3,7 @@
 // ============================================================
 // Instruções: resolva cada exercício no espaço indicado.
 // Use console.log() para exibir os resultados.
-// Lembre-se de instalar o pacote antes de executar:e
+// Lembre-se de instalar o pacote antes de executar:
 //     npm install readline-sync
 // Para executar:
 //     node atividade-06.js
@@ -11,8 +11,8 @@
 // Dica: Ao terminar um exercício, comente-o. Assim os dados
 //       não serão solicitados novamente.
 // ============================================================
-let lerTeclado = require('readline-sync');
-//
+
+
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Tabela verdade do &&
 // ------------------------------------------------------------
@@ -21,24 +21,25 @@ let lerTeclado = require('readline-sync');
 //   "true && true → <resultado>"
 //
 // Combinações:
-//   a) true && truee
+//   a) true && true
 //   b) true && false
 //   c) false && true
 //   d) false && false
 
 // → Seu código aqui:
 
-// let a = true && true
-// console.log(`true && true >=${a}`);
+let a1 = true && true;
+let a2 = true && false;
+let a3 = false && true;
+let a4 = false && false;
 
-// let b = true && false
-// console.log(`true && false >=${b}`);
+console.log(`true && true = ${a1}`);
+console.log(`true && false = ${a2}`);
+console.log(`false && true = ${a3}`);
+console.log(`false && false = ${a4}`);
 
-// let c = false && true
-// console.log(`true && false >=${c}`);
 
-// let d = false && false
-// console.log(`true && false >=${d}`);
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -56,39 +57,44 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let a = true || true;
-// console.log(`true || true >= ${a}`);
+let b1 = true || true;
+let b2 = true || false;
+let b3 = false || true;
+let b4 = false || false;
 
-// let b = true || false
-// console.log(`true || false >= ${b}`);
+console.log(`true || true = ${b1}`);
+console.log(`true || false = ${b2}`);
+console.log(`false || true = ${b3}`);
+console.log(`false || false = ${b4}`);
 
-// let c = false || true
-// console.log(`false || true >= ${b}`);
 
-// let d = false || false
-// console.log(`false || false >= ${b}`);
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 3 – Operador ! (NOT)
 // ------------------------------------------------------------
 // a) Declare "sistemaAtivo" com valor true.
-// b) Declare "modoManutencao" atribuindo o valodo de "sr invertiistemaAtivo" (usando !).
+// b) Declare "modoManutencao" atribuindo o valor invertido de "sistemaAtivo" (usando !).
 // c) Declare "lugarVago" com valor false.
 // d) Declare "lugarOcupado" com o valor invertido de "lugarVago" (usando !).
 // e) Exiba todas as 4 variáveis com template literal mostrando seus valores.
 
 // → Seu código aqui:
 
-// let sistemaAtivo = true
-// let modoManutencao = !sistemaAtivo;
-// let lugarVago = false;
-// let lugarOcupado = !lugarVago
+let sistemaAtivo = true;
+let modoManutencao = !sistemaAtivo;
 
-// console.log(`Sistema ativo: ${sistemaAtivo}`);
-// console.log(`Modo manutenção: ${modoManutencao}`);
-// console.log(`Lugar vago: ${lugarVago}`);
-// console.log(`Lugar ocupado: ${lugarOcupado}`);
+let lugarVago = false;
+let lugarOcupado = !lugarVago;
+
+console.log(`sistemaAtivo = ${sistemaAtivo}`);
+console.log(`modoManutencao = ${modoManutencao}`);
+console.log(`lugarVago = ${lugarVago}`);
+console.log(`lugarOcupado = ${lugarOcupado}`);
+
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -103,21 +109,27 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let usuario = {
-//     peso:lerTeclado.questionFloat("Qual o seu peso?"),
-//     altura:lerTeclado.questionFloat("Qual a sua altura?")
-// }
+const lerTeclado = require('readline-sync');
 
-// usuario.imc = usuario.peso / (usuario.altura ** 2);
+let usuario = {
+  peso: Number(lerTeclado.question("Digite seu peso: ")),
+  altura: Number(lerTeclado.question("Digite sua altura: "))
+};
 
-// let imcAbaixoDoPeso = usuario.imc < 18.5;
-// let imcNormal = usuario.imc >= 18.5 && usuario.imc <= 24.9;
-// let imcAcimaDoPeso = usuario.imc >= 25 && usuario.imc <= 29.9
+usuario.imc = usuario.peso / (usuario.altura ** 2);
 
-// console.log(`IMC : ${usuario.imc}`)
-// console.log(`Abaixo do peso? ${imcAbaixoDoPeso}`);
-// console.log(`Normal? ${imcNormal}`)
-// console.log(`Acima do peso? ${imcAcimaDoPeso}`)
+let imcAbaixoDoPeso = usuario.imc < 18.5;
+let imcNormal = usuario.imc >= 18.5 && usuario.imc <= 24.9;
+let imcAcimaDoPeso = usuario.imc >= 25 && usuario.imc <= 29.9;
+
+console.log(`IMC = ${usuario.imc}`);
+console.log(`Abaixo do peso = ${imcAbaixoDoPeso}`);
+console.log(`Normal = ${imcNormal}`);
+console.log(`Acima do peso = ${imcAcimaDoPeso}`);
+
+
+console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Combinando || com operadores relacionais
@@ -133,15 +145,19 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let notaFinal = 4.8
-// let precisaRecuperacao = notaFinal >= 4 && notaFinal < 6
-// let reprovado =  notaFinal < 4
-// let precisaDeAjuda = precisaRecuperacao || reprovado
+let notaFinal = 4.8;
 
-// console.log(`Nota final: ${notaFinal}`);
-// console.log(`Precisa de recuperacao? ${precisaRecuperacao}`);
-// console.log(`Reprovado? ${reprovado}`)
-// console.log(`Precisa de ajuda? ${precisaDeAjuda}`)
+let precisaRecuperacao = notaFinal >= 4 && notaFinal < 6;
+let reprovado = notaFinal < 4;
+let precisaDeAjuda = precisaRecuperacao || reprovado;
+
+console.log(`notaFinal = ${notaFinal}`);
+console.log(`precisaRecuperacao = ${precisaRecuperacao}`);
+console.log(`reprovado = ${reprovado}`);
+console.log(`precisaDeAjuda = ${precisaDeAjuda}`);
+
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -155,11 +171,17 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-// let temperatura = 38.2
-// let diagnostico = ( temperatura >= 37.6 ? "Febre detectada" : "temperatura normal" )
+let temperatura = 38.2;
 
-// console.log(`A temperatura é ${temperatura}°C. Resultado: ${diagnostico}.`)
+let diagnostico = temperatura >= 37.6
+  ? "Febre detectada"
+  : "Temperatura normal";
 
+console.log(`temperatura = ${temperatura}`);
+console.log(`diagnostico = ${diagnostico}`);
+
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -168,16 +190,23 @@ let lerTeclado = require('readline-sync');
 // a) Declare "velocidade" com valor 110 e "limiteVelocidade" com valor 100.
 // c) Usando o operador ternário, armazene em "statusMulta":
 //    Se velocidade > limiteVelocidade → "Multa aplicada"
-//    Caso contrário                    → "Velocidade regular"
+//    Caso contrário → "Velocidade regular"
 // c) Exiba a variável "statusMulta" com template literal mostrando a velocidade e o resultado da multa.
 
 // → Seu código aqui:
 
-// let velocidade = 90
-// let limiteVelocidade = 100
-// let statusMulta = (velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade regular")
+let velocidade = 110;
+let limiteVelocidade = 100;
 
-// console.log(`A velocidade é ${velocidade} km/h. Status: ${statusMulta}.`)
+let statusMulta = velocidade > limiteVelocidade
+  ? "Multa aplicada"
+  : "Velocidade regular";
+
+console.log(`velocidade = ${velocidade}`);
+console.log(`statusMulta = ${statusMulta}`);
+
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -192,21 +221,18 @@ let lerTeclado = require('readline-sync');
 
 // → Seu código aqui:
 
-<<<<<<< HEAD
-// let ehEstudante = lerTeclado.keyInYN("Você é bolsista?");
-// let pagaMais = lerTeclado.keyInYN("Estudante paga mais que R$ 1000,00 mensais pelo curso?");
-// let mensagem =(ehEstudante && pagaMais)  ? "Desconto aplicado!"  : "Desconto não aplicado.";
-// console.log(`Situação do aluno: Bolsista? ${ehEstudante}, Paga mais que R$ 1000,00? ${pagaMais}. ${mensagem}`);
-=======
-let ehEstudante = lerTeclado.keyInYN("Você é bolsista? ");
-let pagaMais = lerTeclado.keyInYN("Paga mais que R$ 1000,00 por mês? ");
+let ehEstudante = lerTeclado.keyInYN("É bolsista? ");
+let pagaMaisMil = lerTeclado.questionFloat("Paga mais que R$1000? ");
 
-let mensagem = (ehEstudante && pagaMais)
-    ? "Desconto aplicado!"
-    : "Desconto não aplicado.";
+let mensagem = (ehEstudante && pagaMaisMil > 1000)
+  ? "Desconto aplicado!"
+  : "Desconto não aplicado.";
 
-console.log(`${mensagem}`);
->>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
+console.log(`mensagem = ${mensagem}`);
+
+
+console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Verificação de acesso com input
@@ -226,56 +252,26 @@ console.log(`${mensagem}`);
 
 // → Seu código aqui:
 
-<<<<<<< HEAD
-// let idade = lerTeclado.questionInt("Digite sua idade:")
-// let possuiIngresso = lerTeclado.keyInYN("Possui ingresso? ");
-// let ehAssociado = lerTeclado.keyInYN("E associado? ");
-
-// let usuario = {
-//     idade: idade,
-//     possuiIngresso: possuiIngresso,
-//     ehAssociado: ehAssociado
-
-
-    if (idade >= 18 && possuiIngresso){
-        console.log("entrada normal liberada")
-    }
-
-    else if (idade >= 18 && ehAssociado){
-        console.log("associado liberado")
-    } 
-
-    else if (idade < 18 && (possuiIngresso || ehAssociado)){
-        console.log("entrada negada, precisa de um acompanhante")
-    }
-
-    else {
-        console.log("entrada negada, compre um ingresso ou se associej")
-    }
-
-=======
 let pessoa = {
-    idade: lerTeclado.questionInt("Digite sua idade: "),
-    possuiIngresso: lerTeclado.keyInYN("Possui ingresso? "),
-    ehAssociado: lerTeclado.keyInYN("É associado ao clube? ")
+  idade: lerTeclado.questionInt("Idade: "),
+  possuiIngresso: lerTeclado.keyInYN("Possui ingresso? "),
+  ehAssociado: lerTeclado.keyInYN("e associado? ")
 };
 
-let verificacoes = {
-    podeEntrarNormal: (pessoa.idade >= 18 && pessoa.possuiIngresso) || pessoa.ehAssociado,
-    podeEntrarSocio: pessoa.possuiIngresso && pessoa.ehAssociado,
-    precisaAcompanhante: pessoa.idade < 18,
-    naoPodeEntrar: !pessoa.possuiIngresso && !pessoa.ehAssociado
+let acesso = {
+  podeEntrarNormal: (pessoa.idade >= 18 && pessoa.possuiIngresso) || pessoa.ehAssociado,
+  podeEntrarSocio: pessoa.possuiIngresso && pessoa.ehAssociado,
+  precisaAcompanhante: pessoa.idade < 18,
+  naoPodeEntrar: !pessoa.possuiIngresso && !pessoa.ehAssociado
 };
 
-console.table(verificacoes);
-
-let mensagemFinal =
-    (verificacoes.podeEntrarNormal || verificacoes.podeEntrarSocio)
+let mensagemAcesso =
+  (acesso.podeEntrarNormal || acesso.podeEntrarSocio)
     ? "Entrada liberada!"
     : "Entrada negada.";
 
-console.log(mensagemFinal);
->>>>>>> 7056c6945d73d74cd15fbeda361c02b26bc92006
+console.log(`mensagem = ${mensagemAcesso}`);
+
 
 console.log("_______________________________");
 
@@ -297,19 +293,19 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 let produto = {
-    nome: lerTeclado.question("Nome do produto: "),
-    quantidade: lerTeclado.questionInt("Quantidade em estoque: "),
-    ativo: lerTeclado.keyInYN("Produto ativo no sistema? ")
+  nome: lerTeclado.question("Nome do produto: "),
+  quantidade: lerTeclado.questionInt("Quantidade: "),
+  ativo: lerTeclado.keyInYN("Produto ativo? ")
 };
 
 let temEstoque = produto.quantidade > 0;
 let produtoDisponivel = temEstoque && produto.ativo;
 let produtoIndisponivel = !temEstoque || !produto.ativo;
 
-console.log(`Produto: ${produto.nome}`);
-console.log(`Tem estoque: ${temEstoque}`);
-console.log(`Produto disponível: ${produtoDisponivel}`);
-console.log(`Produto indisponível: ${produtoIndisponivel}`);
+console.log(`temEstoque = ${temEstoque}`);
+console.log(`produtoDisponivel = ${produtoDisponivel}`);
+console.log(`produtoIndisponivel = ${produtoIndisponivel}`);
+
 
 console.log("_______________________________");
 
@@ -330,19 +326,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let usuario = {
-    ehAdmin: lerTeclado.keyInYN("É administrador? "),
-    logado: lerTeclado.keyInYN("Está logado? "),
-    contaAtiva: lerTeclado.keyInYN("Conta ativa? ")
+let usuarioSistema = {
+  ehAdmin: lerTeclado.keyInYN("É admin? "),
+  logado: lerTeclado.keyInYN("Está logado? "),
+  contaAtiva: lerTeclado.keyInYN("Conta ativa? ")
 };
 
-let acessoSistema = usuario.logado && usuario.contaAtiva;
-let acessoAdmin = acessoSistema && usuario.ehAdmin;
-let acessoNegado = !usuario.logado || !usuario.contaAtiva;
+let acessoSistema = usuarioSistema.logado && usuarioSistema.contaAtiva;
+let acessoAdmin = acessoSistema && usuarioSistema.ehAdmin;
+let acessoNegado = !usuarioSistema.logado || !usuarioSistema.contaAtiva;
 
-console.log(`Acesso ao sistema: ${acessoSistema}`);
-console.log(`Acesso de administrador: ${acessoAdmin}`);
-console.log(`Acesso negado: ${acessoNegado}`);
+console.log(`acessoSistema = ${acessoSistema}`);
+console.log(`acessoAdmin = ${acessoAdmin}`);
+console.log(`acessoNegado = ${acessoNegado}`);
+
 
 console.log("_______________________________");
 
@@ -367,21 +364,19 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 let credenciaisSistema = {
-    usuario: "admin",
-    senha: "1234"
+  usuario: "admin",
+  senha: "1234"
 };
 
 let usuarioDigitado = lerTeclado.question("Usuário: ");
 let senhaDigitada = lerTeclado.question("Senha: ");
 
 let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario;
-let senhaCorreta = senhaDigitada === credenciaisSistema.senha;
+let senhaCorreta = senhaDigitado === credenciaisSistema.senha;
 let loginValido = usuarioCorreto && senhaCorreta;
 
-let mensagem =
-    loginValido
-    ? "Login realizado com sucesso!"
-    : "Usuário ou senha incorretos.";
+let resultadoLogin = loginValido
+  ? "Login realizado com sucesso!"
+  : "Usuário ou senha incorretos.";
 
-console.log(mensagem);
-console.log("_______________________________");
+console.log(`resultadoLogin = ${resultadoLogin}`);
