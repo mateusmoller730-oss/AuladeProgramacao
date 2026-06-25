@@ -10,20 +10,18 @@
 // b) Usando while, exiba os números de 1 a 7 no console.
 // c) Ao final, exiba: "Fim da contagem!" 
 
-
-
-
-
 // → Seu código aqui:
 
-// let n = 1;
+let n = 1;
 
-// while (n <= 7) {
-//     console.log(n);
-//     n++;
-// }
+while (n <= 7) {
+    console.log(n);
+    n++;
+}
 
 console.log("Fim da contagem!");
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -35,14 +33,14 @@ console.log("Fim da contagem!");
 
 // → Seu código aqui:
 
-// let regressiva = 10
-//     while (regressiva > 0){
-//         console.log(`contagem regressiva: ${regressiva}`)
-//                 regressiva --
-//     if (regressiva === 0){
-//         console.log("lancamento!!")
-//     }
-// }
+let regressiva = 10;
+
+while (regressiva >= 1) {
+    console.log(regressiva);
+    regressiva--;
+}
+
+console.log("Lançamento ON!");
 
 console.log("_______________________________");
 
@@ -55,30 +53,17 @@ console.log("_______________________________");
 // b) Quando o valor for válido, exiba: "Você escolheu: <número>"
 
 // → Seu código aqui:
-let readline = require(`readline-sync`)
-// let n = readline.questionInt("Digite um numero de 1 a 5: ")
-// while((n < 1) || (n > 5)){
-//     console.log("Valor fora do intervalo. Tente novamente.")
-//     readline.questionInt("Digite um numero de 1 a 5: ")
-// }
-// switch(n){
-//     case 1:
-//     console.log(`Voce escolheu: ${n}`)
-//     break;
-//     case 2:
-//     console.log(`Voce escolheu: ${n}`)
-//     break;
-//     case 3:
-//     console.log(`Voce escolheu: ${n}`)
-//     break;
-//     case 4:
-//     console.log(`Voce escolheu: ${n}`)
-//     break;
-//     case 5:
-//     console.log(`Voce escolheu: ${n}`)
-//     break
 
-// }
+let readline = require('readline-sync');
+
+let n3 = readline.questionInt("Digite um numero de 1 a 5: ");
+
+while (n3 < 1 || n3 > 5) {
+    console.log("Valor fora do intervalo. Tente novamente.");
+    n3 = readline.questionInt("Digite um numero de 1 a 5: ");
+}
+
+console.log(`Você escolheu: ${n3}`);
 
 console.log("_______________________________");
 
@@ -92,26 +77,26 @@ console.log("_______________________________");
 // d) Ao final, exiba a soma, a quantidade de numeros digitados e quais foram os números digitados.
 
 // → Seu código aqui:
-// let n = readline.questionInt("Adivinhe o numero:")
 
-// let soma = 0 
-// let numeros = []
-// numeros.push(n)
-// let contador = 0
+let n4 = readline.questionInt("Digite um número (0 para sair): ");
 
-// while(n != 0 ){
-//     console.log("Errou.Tente novamente")
-//     contador ++ 
-//     soma +=n
-//     n = readline.questionInt ("Adivinhe o numero: ")
-//     numeros.push(n)
-//     console.log(`Numeros digitados: ${numeros}`)
+let soma = 0;
+let numeros = [];
+let contador = 0;
 
-// }
+while (n4 != 0) {
+    soma += n4;
+    numeros.push(n4);
+    contador++;
 
-// console.log(`soma das tentativas: ${soma}`)
-// console.log(`Tentativas: ${contador}`)
+    n4 = readline.questionInt("Digite um número (0 para sair): ");
+}
 
+console.log(`Soma: ${soma}`);
+console.log(`Quantidade: ${contador}`);
+console.log(`Números digitados: ${numeros}`);
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -122,29 +107,31 @@ console.log("_______________________________");
 // b) Calcule e exiba a média.
 
 // → Seu código aqui:
-// let nota = readline.questionInt("Digite a nota (-1 para sair):");
-// let soma = 0;
-// let contador = 0;
 
-// while (nota != -1) {
+let nota = readline.questionInt("Digite a nota (-1 para sair): ");
 
-//     if (nota < 0 || nota > 10) {
-//         console.log("Nota inválida.");
-//     } else {
-//         soma += Number(nota);
-//         contador++;
-//     }
+let somaNotas = 0;
+let contadorNotas = 0;
 
-//     nota = readline.questionInt("Digite a nota (-1 para sair):");
-// }
+while (nota != -1) {
 
-// if (contador > 0) {
-//     let media = soma / contador;
-//     console.log("Média:", media);
-// } else {
-//     console.log("Nenhuma nota válida foi digitada.");
-// }
+    if (nota < 0 || nota > 10) {
+        console.log("Nota inválida.");
+    } else {
+        somaNotas += nota;
+        contadorNotas++;
+    }
 
+    nota = readline.questionInt("Digite a nota (-1 para sair): ");
+}
+
+if (contadorNotas > 0) {
+    console.log("Média:", somaNotas / contadorNotas);
+} else {
+    console.log("Nenhuma nota válida foi digitada.");
+}
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -159,34 +146,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let opcao;
+let opcao;
 
-// do {
-//     opcao = prompt(
-//         "1 - Exibir hora atual\n" +
-//         "2 - Exibir data atual\n" +
-//         "0 - Sair"
-//     );
+do {
+    opcao = readline.question(
+        "1 - Exibir hora atual" +
+        "2 - Exibir data atual" +
+        "0 - Sair"
+    );
 
-//     switch (opcao) {
-//         case "1":
-//             console.log(new Date().toLocaleTimeString());
-//             break;
+    switch (opcao) {
+        case "1":
+            console.log(new Date().toLocaleTimeString());
+            break;
 
-//         case "2":
-//             console.log(new Date().toLocaleDateString());
-//             break;
+        case "2":
+            console.log(new Date().toLocaleDateString());
+            break;
 
-//         case "0":
-//             console.log("Saindo...");
-//             break;
+        case "0":
+            console.log("Saindo...");
+            break;
 
-//         default:
-//             console.log("Opção inválida.");
-//     }
+        default:
+            console.log("Opção inválida.");
+    }
 
-// } while (opcao != "0");
-// console.log("_______________________________");
+} while (opcao != "0");
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -203,31 +191,28 @@ console.log("_______________________________");
 //    "<nome> acertou após <tentativas> tentativa(s)! O número era <secreto>."
 
 // → Seu código aqui:
-// let secreto = Math.floor(Math.random() * 50) + 1;
-// let nome = readline.question("Digite o nome do jogador: ")
 
-// let chute = 0;
-// let tentativas = 0;
+let secreto = Math.floor(Math.random() * 50) + 1;
+let nome = readline.question("Digite o nome do jogador: ");
 
-// while (chute !== secreto) {
-//     chute = readline.questionInt("Digite seu palpite de 1 a 50: ")
-//     tentativas++;
+let chute = 0;
+let tentativas = 0;
 
-//     if (chute > secreto ) {
-//         console.log("Muito alto! Tente menor.")
-//     }
+while (chute !== secreto) {
 
-//     else if (chute < secreto) {
-//         console.log("Muito baixo! Tente maior.")
-//     }
-    
-// }
-    
+    chute = readline.questionInt("Digite seu palpite de 1 a 50: ");
+    tentativas++;
 
-// console.log(`${nome} acertou após ${tentativas} tentativa(s)! O número era ${secreto}.`);
+    if (chute > secreto) {
+        console.log("Muito alto! Tente menor.");
+    } else if (chute < secreto) {
+        console.log("Muito baixo! Tente maior.");
+    }
+}
 
+console.log(`${nome} acertou após ${tentativas} tentativa(s)! O número era ${secreto}.`);
 
-
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -239,18 +224,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let i = 1;
-// let numero = readline.questionInt("Digite um numero inteiro: ")
+let i = 1;
+let numero = readline.questionInt("Digite um numero inteiro: ");
 
-// while (i <= 10 ) {
-// let resultado = numero * i;
-// console.log(`${numero} x ${i} = ${resultado}`)
-// i = i + 1;
-// }
-
-
-
-
+while (i <= 10) {
+    console.log(`${numero} x ${i} = ${numero * i}`);
+    i++;
+}
 
 console.log("_______________________________");
 
@@ -268,20 +248,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let saldo = 1000
+let saldo = 1000;
 let rodada = 0;
 
+while (saldo > 0 && rodada < 10) {
 
-while (saldo >= 0 && saldo > 0 )
-let saque = Math.floor(Math.random() * 151) + 50;
+    let saque = Math.floor(Math.random() * 151) + 50;
 
-if (saque > saldo) {
-console.log("Saldo insuficiente. Fim!")
+    if (saque > saldo) {
+        console.log("Saldo insuficiente. Fim!");
+        break;
+    }
 
+    saldo -= saque;
+
+    console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`);
+
+    rodada++;
 }
-else{
-saldo = saldo - saque;
-}
+
+console.log(`Saldo final: R$ ${saldo}`);
+console.log(`Total de rodadas: ${rodada}`);
 
 console.log("_______________________________");
 
@@ -300,5 +287,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let contatos = [];
+let continuar;
 
-console.log("_______________________________");
+do {
+    let nomeContato = readline.question("Nome: ");
+    let telefone = readline.question("Telefone: ");
+
+    contatos.push({ nome: nomeContato, telefone });
+
+    continuar = readline.keyInYN("Adicionar outro contato? ");
+
+} while (continuar);
+
+console.table(contatos);
+console.log(`Total de contatos cadastrados: ${contatos.length}`);
